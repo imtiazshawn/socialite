@@ -4,59 +4,59 @@
         <div class="sidebar_inner" data-simplebar>
     
             <ul>
-                <li>
-                    <nuxt-link to="/feed" class="active">
+                <li :class="{ slide_active: this.$route.path === '/feed' }">
+                    <nuxt-link to="/feed">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-blue-600"> 
                         <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
                         </svg>
-                        <span> Feed </span>
+                        <span :class="{ slide_bold: this.$route.path === '/feed' }"> Feed </span>
                     </nuxt-link>
                 </li>
-                <li>
+                <li :class="{ slide_active: this.$route.path === '/pages' }">
                     <nuxt-link to="/pages">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-yellow-500">
                         <path fill-rule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clip-rule="evenodd"></path>
                         </svg>
-                        <span> Pages </span>
+                        <span :class="{ slide_bold: this.$route.path === '/pages' }"> Pages </span>
                     </nuxt-link>
                 </li>
 
-                <li>
+                <li :class="{ slide_active: this.$route.path === '/videos' }">
                     <nuxt-link to="videos">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-red-500">
                             <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm3 2h6v4H7V5zm8 8v2h1v-2h-1zm-2-2H7v4h6v-4zm2 0h1V9h-1v2zm1-4V5h-1v2h1zM5 5v2H4V5h1zm0 4H4v2h1V9zm-1 4h1v2H4v-2z" clip-rule="evenodd" />
                         </svg>
-                        <span> Video</span>
+                        <span :class="{ slide_bold: this.$route.path === '/videos' }"> Video</span>
                     </nuxt-link>
                 </li> 
-                <li>
+                <li :class="{ slide_active: this.$route.path === '/groups' }">
                     <nuxt-link to="/groups"> 
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-blue-500">
                             <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
-                        </svg><span> Groups </span>
+                        </svg><span :class="{ slide_bold: this.$route.path === '/groups' }"> Groups </span>
                     </nuxt-link> 
                 </li>
-                <li>
+                <li :class="{ slide_active: this.$route.path === '/jobs' }">
                     <nuxt-link to="/jobs"> 
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-pink-500">
                             <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd" />
                             <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
-                        </svg> <span> Jobs</span> 
+                        </svg> <span :class="{ slide_bold: this.$route.path === '/jobs' }"> Jobs</span> 
                     </nuxt-link> 
                 </li> 
-                <li>
+                <li :class="{ slide_active: this.$route.path === '/courses' }">
                     <nuxt-link to="/courses">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-indigo-500">
                             <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
                         </svg>
-                        <span> Course</span>
+                        <span :class="{ slide_bold: this.$route.path === '/courses' }"> Course</span>
                     </nuxt-link> 
                 </li>
-                <li>
+                <li :class="{ slide_active: this.$route.path === '/games' }">
                     <nuxt-link to="/games"> 
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-green-500">
                             <path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" />
-                        </svg>  <span>  Games </span>
+                        </svg>  <span :class="{ slide_bold: this.$route.path === '/games' }">  Games </span>
                     </nuxt-link> 
                 </li> 
                 
@@ -207,3 +207,15 @@
 
     </div> 
 </template>
+
+
+<style>
+    .slide_active {
+        background-color: #eaecfa;
+        border-radius: 10px;
+    }
+    .slide_bold {
+        font-weight: bold;
+        color: #4055ec;
+    }
+</style>
