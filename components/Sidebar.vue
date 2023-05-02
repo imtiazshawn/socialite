@@ -106,7 +106,7 @@
                 </li>
                 <li id="more-veiw" hidden><nuxt-link to="fundraiser.html"> 
                     <svg fill="currentColor" class="text-red-500" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg>
-                    <span>  Fundraiser </span> <span class="new">N</span></nuxt-link> 
+                    <span> Fundraiser </span> <span class="new">N</span></nuxt-link> 
                 </li> 
             </ul>
 
@@ -119,7 +119,7 @@
                     <svg  class="bg-gray-100 mr-2 p-0.5 rounded-full text-lg w-7"  fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg> 
                     See Less 
                 </span>
-            </nuxt-link>  
+            </nuxt-link>
             
             <h3 class="side-title"> Contacts </h3>
 
@@ -210,6 +210,10 @@
 
 
 <style>
+    .sidebar_inner {
+        overflow-y: auto;
+        height: 100%;
+    }
     .slide_active {
         background-color: #eaecfa;
         border-radius: 10px;
@@ -217,5 +221,27 @@
     .slide_bold {
         font-weight: bold;
         color: #4055ec;
+    }
+
+        /* Style the scrollbar */
+    ::-webkit-scrollbar {
+    width: 4px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+    background: #e4e4e5;
+    border-radius: 20%;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+    background: #e4e4e5
+;
     }
 </style>
