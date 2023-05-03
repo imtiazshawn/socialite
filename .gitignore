@@ -90,3 +90,4 @@ sw.*
 *.swp
 ztest.js
 ztest.txt
+ztest.vue
