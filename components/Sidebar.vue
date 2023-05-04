@@ -160,36 +160,66 @@
             </div>
 
             <ul class="side_links" data-sub-title="Pages">
-                <li><nuxt-link to="feed.html"> <ion-icon name="settings-outline" class="side-icon"></ion-icon>  <span> Setting  </span> </nuxt-link> 
-                    <ul>
+                <li>
+                    <a @click="expandSetting"> 
+                        <ion-icon name="settings-outline" class="side-icon"></ion-icon>  
+                        <span> Setting  </span> 
+                        <i v-if="!isSettingOpen" class="fa fa-chevron-down fa-sm" style="font-size: 17px; left: 140px;"></i>
+                        <i v-else class="fa fa-chevron-up fa-sm" style="font-size: 17px; left: 140px;"></i>
+                    </a> 
+                    <ul :class="{'sideLinks_ul': true, 'open': isSettingOpen}">
                         <li><nuxt-link to="/pages-setting">layout 1</nuxt-link></li>
                         <li><nuxt-link to="/pages-setting2">layout 2</nuxt-link></li>
                     </ul>
                 </li>
-                <li><nuxt-link to="#"> <ion-icon name="albums-outline" class="side-icon"></ion-icon> <span> Info Pages  </span> </nuxt-link>
-                    <ul> 
-                        <li><nuxt-link to="pages-about.html"> About </nuxt-link></li>
-                        <li><nuxt-link to="pages-contact.html"> Contact us </nuxt-link></li>
-                        <li><nuxt-link to="pages-privacy.html"> Privacy </nuxt-link></li>
+                <li>
+                    <a @click="expandPages"> 
+                        <ion-icon name="albums-outline" class="side-icon"></ion-icon> 
+                        <span> Info Pages  </span> 
+                        <i v-if="!isPagesOpen" class="fa fa-chevron-down fa-sm" style="font-size: 17px; left: 115px;"></i>
+                        <i v-else class="fa fa-chevron-up fa-sm" style="font-size: 17px; left: 115px;"></i>
+                    </a>
+                    <ul :class="{'sideLinks_ul': true, 'open': isPagesOpen}"> 
+                        <li><nuxt-link to="/pages-about"> About </nuxt-link></li>
+                        <li><nuxt-link to="/pages-contact"> Contact us </nuxt-link></li>
+                        <li><nuxt-link to="/pages-privacy"> Privacy </nuxt-link></li>
                     </ul>
                 </li> 
-                <li><nuxt-link to="#"> <ion-icon name="document-outline" class="side-icon"></ion-icon> <span> Create Content </span>  </nuxt-link> 
-                    <ul>
-                        <li><nuxt-link to="create-group.html"> Create Group </nuxt-link></li>
-                        <li><nuxt-link to="create-page.html"> Create Page </nuxt-link></li> 
+                <li>
+                    <a @click="expandContent"> 
+                        <ion-icon name="document-outline" class="side-icon"></ion-icon> 
+                        <span> Create Content </span> 
+                        <i v-if="!isContentOpen" class="fa fa-chevron-down fa-sm" style="font-size: 17px; left: 79px;"></i> 
+                        <i v-else class="fa fa-chevron-up fa-sm" style="font-size: 17px; left: 79px;"></i> 
+                    </a> 
+                    <ul :class="{'sideLinks_ul': true, 'open': isContentOpen}">
+                        <li><nuxt-link to="/create-group"> Create Group </nuxt-link></li>
+                        <li><nuxt-link to="/create-page"> Create Page </nuxt-link></li> 
                     </ul>
                 </li>
-                <li><nuxt-link to="#"> <ion-icon name="code-slash-outline" class="side-icon"></ion-icon> <span> Development  </span> </nuxt-link>
-                    <ul> 
-                        <li><nuxt-link to="development-components.html"> Compounents </nuxt-link></li>
-                        <li><nuxt-link to="development-plugins.html"> Plugins </nuxt-link></li>
-                        <li><nuxt-link to="development-icons.html"> Icons </nuxt-link></li>
+                <li>
+                    <a @click="expandDevelopment"> 
+                        <ion-icon name="code-slash-outline" class="side-icon"></ion-icon> 
+                        <span> Development  </span> 
+                        <i v-if="!isDevelopmentOpen" class="fa fa-chevron-down fa-sm" style="font-size: 17px; left: 94px;"></i>
+                        <i v-else class="fa fa-chevron-up fa-sm" style="font-size: 17px; left: 94px;"></i>
+                    </a>
+                    <ul :class="{'sideLinks_ul': true, 'open': isDevelopmentOpen}"> 
+                        <li><nuxt-link to="/development-components"> Compounents </nuxt-link></li>
+                        <li><nuxt-link to="/development-plugins"> Plugins </nuxt-link></li>
+                        <li><nuxt-link to="/development-icons"> Icons </nuxt-link></li>
                     </ul>
                 </li>
-                <li><nuxt-link to="#"> <ion-icon name="log-in-outline" class="side-icon"></ion-icon> <span>  Authentication  </span>  </nuxt-link>
-                    <ul>
-                        <li><nuxt-link to="form-login.html">form login </nuxt-link></li>
-                        <li><nuxt-link to="form-register.html">form register</nuxt-link></li>
+                <li>
+                    <a @click="expandAuthentication"> 
+                        <ion-icon name="log-in-outline" class="side-icon"></ion-icon> 
+                        <span>  Authentication  </span> 
+                        <i v-if="!isAuthenticationOpen" class="fa fa-chevron-down fa-sm" style="font-size: 17px; left: 82px;"></i> 
+                        <i v-else class="fa fa-chevron-up fa-sm" style="font-size: 17px; left: 82px;"></i> 
+                    </a>
+                    <ul :class="{'sideLinks_ul': true, 'open': isAuthenticationOpen}">
+                        <li><nuxt-link to="/form-login">form login </nuxt-link></li>
+                        <li><nuxt-link to="/form-register">form register</nuxt-link></li>
                     </ul>
                 </li>
                 
@@ -220,6 +250,7 @@
         return {
         showMore: true,
         showLess: false,
+        // Toggle Menu
         hiddenEvents: true,
         hiddenProducts: true,
         hiddenPhotos: true,
@@ -227,6 +258,12 @@
         hiddenForum: true,
         hiddenBirthdays: true,
         hiddenFundraiser: true,
+        // Toggle Pages Menu
+        isSettingOpen: false,
+        isPagesOpen: false,
+        isContentOpen: false,
+        isDevelopmentOpen: false,
+        isAuthenticationOpen: false,
         };
     },
     methods: {
@@ -251,7 +288,22 @@
         this.hiddenForum = true;
         this.hiddenBirthdays = true;
         this.hiddenFundraiser = true;
-        }
+        },
+        expandSetting() {
+        this.isSettingOpen = !this.isSettingOpen
+        },
+        expandPages() {
+        this.isPagesOpen = !this.isPagesOpen
+        },
+        expandContent() {
+        this.isContentOpen = !this.isContentOpen
+        },
+        expandDevelopment() {
+        this.isDevelopmentOpen = !this.isDevelopmentOpen
+        },
+        expandAuthentication() {
+        this.isAuthenticationOpen = !this.isAuthenticationOpen
+        },
     }
     };
 </script>
@@ -291,5 +343,18 @@
     ::-webkit-scrollbar-thumb:hover {
     background: #e4e4e5
 ;
+    }
+
+    .sideLinks_ul {
+        margin-left: 30px;
+        display: none;
+    }
+    .open {
+        display: block;
+    }
+    .fa-chevron-down {
+        position: absolute;
+        color: #a8a8a8;
+        top: 4px;
     }
 </style>

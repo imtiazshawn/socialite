@@ -49,7 +49,8 @@ export default {
   css: [
     '~/assets/css/icons.css',
     '~/assets/css/style.css',
-    '~/assets/css/uikit.css'
+    '~/assets/css/uikit.css',
+    '@fortawesome/fontawesome-free/css/all.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
