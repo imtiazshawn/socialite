@@ -1,0 +1,3 @@
+<template>
+    <ContentForums />
+</template>

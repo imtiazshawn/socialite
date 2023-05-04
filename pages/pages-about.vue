@@ -1,0 +1,3 @@
+<template>
+    <ContentPagesAbout />
+</template>
