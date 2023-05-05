@@ -5,13 +5,13 @@
     
                     <div class="flex items-center lg:justify-between justify-around">
     
-                        <a href="trending.html">
-                            <img src="assets/images/logo.png" alt="" class="w-32">
+                        <a href="/">
+                            <img src="../assets/images/logo.png" alt="" class="w-32">
                         </a>
     
                         <div class="capitalize flex font-semibold hidden lg:block my-2 space-x-3 text-center text-sm">
-                            <a href="form-login.html" class="py-3 px-4">Login</a>
-                            <a href="form-register.html" class="bg-purple-500 purple-500 px-6 py-3 rounded-md shadow text-white">Register</a>
+                            <a href="/form/login" class="py-3 px-4">Login</a>
+                            <a href="/form/register" class="bg-purple-500 purple-500 px-6 py-3 rounded-md shadow text-white">Register</a>
                         </div>
     
                     </div>
