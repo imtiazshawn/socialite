@@ -8,7 +8,7 @@ export default defineNuxtConfig({
                 {rel: "stylesheet", href: "css/uikit.css"},
                 { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
                 { rel: 'stylesheet', type: 'text/css', href: 'https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css' },
-                { rel: 'stylesheet', href: '@fortawesome/fontawesome-svg-core/styles.css' },
+                { rel: 'stylesheet', href: '@fortawesome/fontawesome-free/css/all.css' },
             ],
             script: [
                 {

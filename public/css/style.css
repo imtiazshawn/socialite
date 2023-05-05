@@ -6098,7 +6098,7 @@ template {
   display: flex !important;
 }
 
-.sidebar .sidebar_inner ul li a:after {
+/* .sidebar .sidebar_inner ul li a:after {
   font-family: "Feather-Icons";
   content: '\e92e';
   opacity: 1;
@@ -6112,7 +6112,7 @@ template {
   position: absolute;
   right: 12px;
   top: 4px;
-}
+} */
 
 .sidebar .sidebar_inner ul li span.soon, .sidebar .sidebar_inner ul li span.new {
   position: absolute;
@@ -6140,7 +6140,7 @@ template {
   background-color: #fcdfdf;
 }
 
-.sidebar .sidebar_inner ul li ul {
+/* .sidebar .sidebar_inner ul li ul {
   padding: 0;
   margin: 0;
   border: 0;
@@ -6149,7 +6149,7 @@ template {
   opacity: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-}
+} */
 
 .sidebar .sidebar_inner ul li.active-submenu ul {
   padding: 0 0 10px 35px;

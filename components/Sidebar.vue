@@ -193,48 +193,71 @@
             </div>
 
 
-            <!-- PAGES -->
             <ul class="side_links" data-sub-title="Pages">
-
-                <li><nuxt-link to="/feed"> <ion-icon name="settings-outline" class="side-icon"></ion-icon> <span> Setting
-                        </span> </nuxt-link>
-                    <ul>
-                        <li><nuxt-link to="pages-setting.html">layout 1</nuxt-link></li>
-                        <li><nuxt-link to="pages-setting2.html">layout 2</nuxt-link></li>
+                <li>
+                    <a @click="expandSetting"> 
+                        <ion-icon name="settings-outline" class="side-icon"></ion-icon>  
+                        <span> Setting  </span> 
+                        <ion-icon v-if="!isSettingOpen" name="chevron-down-outline" style="font-size: 19px; color: #a8a8a8; margin-left: 140px;"></ion-icon>
+                        <ion-icon v-else name="chevron-up-outline" style="font-size: 19px; color: #a8a8a8; margin-left: 140px;"></ion-icon>
+                    </a> 
+                    <ul :class="{'sideLinks_ul': true, 'open': isSettingOpen}">
+                        <li><nuxt-link to="/pages-setting">layout 1</nuxt-link></li>
+                        <li><nuxt-link to="/pages-setting2">layout 2</nuxt-link></li>
                     </ul>
                 </li>
-                <li><nuxt-link to="#"> <ion-icon name="albums-outline" class="side-icon"></ion-icon> <span> Info Pages
-                        </span> </nuxt-link>
-                    <ul>
+                <li>
+                    <a @click="expandPages"> 
+                        <ion-icon name="albums-outline" class="side-icon"></ion-icon> 
+                        <span> Info Pages  </span> 
+                        <ion-icon v-if="!isPagesOpen" name="chevron-down-outline" style="font-size: 19px; color: #a8a8a8; margin-left: 116px;"></ion-icon>
+                        <ion-icon v-else name="chevron-up-outline" style="font-size: 19px; color: #a8a8a8; margin-left: 115px;"></ion-icon>
+                    </a>
+                    <ul :class="{'sideLinks_ul': true, 'open': isPagesOpen}"> 
                         <li><nuxt-link to="/pages-about"> About </nuxt-link></li>
                         <li><nuxt-link to="/pages-contact"> Contact us </nuxt-link></li>
                         <li><nuxt-link to="/pages-privacy"> Privacy </nuxt-link></li>
                     </ul>
-                </li>
-                <li><nuxt-link to="#"> <ion-icon name="document-outline" class="side-icon"></ion-icon> <span> Create Content
-                        </span> </nuxt-link>
-                    <ul>
-                        <li><a href="/create-group"> Create Group </a></li>
-                        <li><a href="/create-page"> Create Page </a></li>
+                </li> 
+                <li>
+                    <a @click="expandContent"> 
+                        <ion-icon name="document-outline" class="side-icon"></ion-icon> 
+                        <span> Create Content </span> 
+                        <ion-icon v-if="!isContentOpen" name="chevron-down-outline" style="font-size: 19px; color: #a8a8a8; margin-left: 79px;"></ion-icon>
+                        <ion-icon v-else name="chevron-up-outline" style="font-size: 19px; color: #a8a8a8; margin-left: 79px;"></ion-icon>
+                    </a> 
+                    <ul :class="{'sideLinks_ul': true, 'open': isContentOpen}">
+                        <li><nuxt-link to="/create-group"> Create Group </nuxt-link></li>
+                        <li><nuxt-link to="/create-page"> Create Page </nuxt-link></li> 
                     </ul>
                 </li>
-                <li><nuxt-link to="#"> <ion-icon name="code-slash-outline" class="side-icon"></ion-icon> <span> Development
-                        </span> </nuxt-link>
-                    <ul>
+                <li>
+                    <a @click="expandDevelopment"> 
+                        <ion-icon name="code-slash-outline" class="side-icon"></ion-icon> 
+                        <span> Development  </span> 
+                        <ion-icon v-if="!isDevelopmentOpen" name="chevron-down-outline" style="font-size: 19px; color: #a8a8a8; margin-left: 94px;"></ion-icon>
+                        <ion-icon v-else name="chevron-up-outline" style="font-size: 19px; color: #a8a8a8; margin-left: 94px;"></ion-icon>
+                    </a>
+                    <ul :class="{'sideLinks_ul': true, 'open': isDevelopmentOpen}"> 
                         <li><nuxt-link to="/development-components"> Compounents </nuxt-link></li>
-                    <li><nuxt-link to="/development-plugins"> Plugins </nuxt-link></li>
-                    <li><nuxt-link to="/development-icons"> Icons </nuxt-link></li>
-                </ul>
-            </li>
-            <li><nuxt-link to="#"> <ion-icon name="log-in-outline" class="side-icon"></ion-icon> <span> Authentication
-                    </span> </nuxt-link>
-                <ul>
-                    <li><nuxt-link to="/form-login">form login </nuxt-link></li>
-                    <li><nuxt-link to="/form-register">form register</nuxt-link></li>
-                </ul>
-            </li>
-
-        </ul>
+                        <li><nuxt-link to="/development-plugins"> Plugins </nuxt-link></li>
+                        <li><nuxt-link to="/development-icons"> Icons </nuxt-link></li>
+                    </ul>
+                </li>
+                <li>
+                    <a @click="expandAuthentication"> 
+                        <ion-icon name="log-in-outline" class="side-icon"></ion-icon> 
+                        <span>  Authentication  </span> 
+                        <ion-icon v-if="!isAuthenticationOpen" name="chevron-down-outline" style="font-size: 19px; color: #a8a8a8; margin-left: 82px;"></ion-icon>
+                        <ion-icon v-else name="chevron-up-outline" style="font-size: 19px; color: #a8a8a8; margin-left: 82px;"></ion-icon>
+                    </a>
+                    <ul :class="{'sideLinks_ul': true, 'open': isAuthenticationOpen}">
+                        <li><nuxt-link to="/form-login">form login </nuxt-link></li>
+                        <li><nuxt-link to="/form-register">form register</nuxt-link></li>
+                    </ul>
+                </li>
+                
+            </ul>
 
         <div class="footer-links">
             <nuxt-link to="#">About</nuxt-link>
@@ -254,27 +277,78 @@
 </div></template>
 
 
-<style>.sidebar_inner {
-    overflow-y: auto;
-    height: 100%;
-}
 
-::-webkit-scrollbar {
+<script>
+    export default {
+    data() {
+        return {
+        // Toggle Pages Menu
+        isSettingOpen: false,
+        isPagesOpen: false,
+        isContentOpen: false,
+        isDevelopmentOpen: false,
+        isAuthenticationOpen: false,
+        };
+    },
+    methods: {
+        expandSetting() {
+        this.isSettingOpen = !this.isSettingOpen
+        },
+        expandPages() {
+        this.isPagesOpen = !this.isPagesOpen
+        },
+        expandContent() {
+        this.isContentOpen = !this.isContentOpen
+        },
+        expandDevelopment() {
+        this.isDevelopmentOpen = !this.isDevelopmentOpen
+        },
+        expandAuthentication() {
+        this.isAuthenticationOpen = !this.isAuthenticationOpen
+        },
+    }
+    };
+</script>
+
+
+<style>
+    .sidebar_inner {
+        overflow-y: auto;
+        height: 100%;
+    }
+
+        /* Style the scrollbar */
+    ::-webkit-scrollbar {
     width: 4px;
-}
+    }
 
-/* Track */
-::-webkit-scrollbar-track {
+    /* Track */
+    ::-webkit-scrollbar-track {
     background: #f1f1f1;
-}
+    }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
     background: #e4e4e5;
     border-radius: 20%;
-}
+    }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #e4e4e5;
-}</style>
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+    background: #e4e4e5
+;
+    }
+
+    .sideLinks_ul {
+        margin-left: 30px;
+        display: none;
+    }
+    .open {
+        display: block;
+    }
+    .fa-chevron-down {
+        position: absolute;
+        color: #a8a8a8;
+        top: 4px;
+    }
+</style>
