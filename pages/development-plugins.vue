@@ -1,0 +1,3 @@
+<template>
+    <development-plugins />
+</template>
