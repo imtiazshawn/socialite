@@ -252,8 +252,8 @@
                         <ion-icon v-else name="chevron-up-outline" style="font-size: 19px; color: #a8a8a8; margin-left: 82px;"></ion-icon>
                     </a>
                     <ul :class="{'sideLinks_ul': true, 'open': isAuthenticationOpen}">
-                        <li><nuxt-link to="/form-login">form login </nuxt-link></li>
-                        <li><nuxt-link to="/form-register">form register</nuxt-link></li>
+                        <li><nuxt-link to="/form/login">form login </nuxt-link></li>
+                        <li><nuxt-link to="/form/register">form register</nuxt-link></li>
                     </ul>
                 </li>
                 
