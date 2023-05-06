@@ -9,7 +9,6 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@fortawesome/vue-fontawesome": "^3.0.3",
     "@types/node": "^18",
     "nuxt": "^3.4.3"
   }

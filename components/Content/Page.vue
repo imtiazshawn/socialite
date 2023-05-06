@@ -27,7 +27,7 @@
                                 <ul class="uk-slider-items uk-child-width-1-3@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small uk-grid">
 
                                     <li>
-                                        <a href="timeline-page.html" class="uk-link-reset">
+                                        <a href="/timeline/pages" class="uk-link-reset">
                                             <div class="card">
                                                 <img src="../../assets/images/avatars/avatar-1.jpg" class="h-44 object-cover rounded-t-md shadow-sm w-full">
                                                 <div class="p-4">
@@ -39,7 +39,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="timeline-page.html">
+                                        <a href="/timeline/pages">
                                             <div class="card">
                                                 <img src="../../assets/images/avatars/avatar-7.jpg" class="h-44 object-cover rounded-t-md shadow-sm w-full">
                                                 <div class="p-4">
@@ -50,7 +50,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="timeline-page.html">
+                                        <a href="/timeline/pages">
                                             <div class="card">
                                                 <img src="../../assets/images/avatars/avatar-3.jpg" class="h-44 object-cover rounded-t-md shadow-sm w-full">
                                                 <div class="p-4">
@@ -61,7 +61,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="timeline-page.html">
+                                        <a href="/timeline/pages">
                                             <div class="card">
                                                 <img src="../../assets/images/avatars/avatar-4.jpg" class="h-44 object-cover rounded-t-md shadow-sm w-full">
                                                 <div class="p-4">
@@ -72,7 +72,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="timeline-page.html">
+                                        <a href="/timeline/pages">
                                             <div class="card">
                                                 <img src="../../assets/images/avatars/avatar-5.jpg" class="h-44 object-cover rounded-t-md shadow-sm w-full">
                                                 <div class="p-4">
@@ -85,9 +85,15 @@
                                 </ul>
 
                                 <a class="absolute bg-white bottom-1/2 flex items-center justify-center p-2 -left-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white"
-                                    href="#" uk-slider-item="previous"> <i class="icon-feather-chevron-left"></i></a>
+                                    href="#" uk-slider-item="previous"> 
+                                    <!-- <i class="icon-feather-chevron-left"></i> -->
+                                    <ion-icon name="chevron-back-outline"></ion-icon>
+                                </a>
                                 <a class="absolute bg-white bottom-1/2 flex items-center justify-center p-2 -right-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white"
-                                    href="#" uk-slider-item="next"> <i class="icon-feather-chevron-right"></i></a>
+                                    href="#" uk-slider-item="next"> 
+                                    <!-- <i class="icon-feather-chevron-right"></i> -->
+                                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                                </a>
 
                             </div>
                         </div>
@@ -105,7 +111,7 @@
                             <div class="uk-slider-container px-1 py-3">
                                 <ul class="uk-slider-items uk-child-width-1-3@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small uk-grid">
                                     <li>
-                                        <a href="timeline-page.html" class="uk-link-reset">
+                                        <a href="/timeline/pages" class="uk-link-reset">
                                             <div class="card">
                                                 <img src="../../assets/images/avatars/avatar-6.jpg" class="h-44 object-cover rounded-t-md shadow-sm w-full">
                                                 <div class="p-4">
@@ -116,7 +122,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="timeline-page.html">
+                                        <a href="/timeline/pages">
                                             <div class="card">
                                                 <img src="../../assets/images/avatars/avatar-4.jpg" class="h-44 object-cover rounded-t-md shadow-sm w-full">
                                                 <div class="p-4">
@@ -127,7 +133,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="timeline-page.html">
+                                        <a href="/timeline/pages">
                                             <div class="card">
                                                 <img src="../../assets/images/avatars/avatar-7.jpg" class="h-44 object-cover rounded-t-md shadow-sm w-full">
                                                 <div class="p-4">
@@ -138,7 +144,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="timeline-page.html">
+                                        <a href="/timeline/pages">
                                             <div class="card">
                                                 <img src="../../assets/images/avatars/avatar-5.jpg" class="h-44 object-cover rounded-t-md shadow-sm w-full">
                                                 <div class="p-4">
@@ -149,7 +155,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="timeline-page.html">
+                                        <a href="/timeline/pages">
                                             <div class="card">
                                                 <img src="../../assets/images/avatars/avatar-3.jpg" class="h-44 object-cover rounded-t-md shadow-sm w-full">
                                                 <div class="p-4">
@@ -163,9 +169,15 @@
                                 </ul>
 
                                 <a class="absolute bg-white bottom-1/2 flex items-center justify-center p-2 -left-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white"
-                                    href="#" uk-slider-item="previous"> <i class="icon-feather-chevron-left"></i></a>
+                                    href="#" uk-slider-item="previous"> 
+                                    <!-- <i class="icon-feather-chevron-left"></i> -->
+                                    <ion-icon name="chevron-back-outline"></ion-icon>
+                                </a>
                                 <a class="absolute bg-white bottom-1/2 flex items-center justify-center p-2 -right-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white"
-                                    href="#" uk-slider-item="next"> <i class="icon-feather-chevron-right"></i></a>
+                                    href="#" uk-slider-item="next"> 
+                                    <!-- <i class="icon-feather-chevron-right"></i> -->
+                                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                                </a>
 
                             </div>
                         </div>
@@ -188,79 +200,79 @@
                             <div class="p-4 -mt-1.5">
                         
                                 <div class="flex items-center space-x-4 rounded-md -mx-2 p-2 hover:bg-gray-50">
-                                    <a href="timeline-page.html" class="w-12 h-12 flex-shrink-0 overflow-hidden rounded-full relative">
+                                    <a href="/timeline/pages" class="w-12 h-12 flex-shrink-0 overflow-hidden rounded-full relative">
                                         <img src="../../assets/images/avatars/avatar-1.jpg" class="absolute w-full h-full inset-0 " alt="">
                                     </a>
                                     <div class="flex-1">
-                                        <a href="timeline-page.html" class="text-base font-semibold capitalize"> Stella Johnson </a>
+                                        <a href="/timeline/pages" class="text-base font-semibold capitalize"> Stella Johnson </a>
                                         <div class="text-sm text-gray-500 mt-0.5"> 845K Following</div>
                                     </div>
-                                    <a href="timeline-page.html"
+                                    <a href="/timeline/pages"
                                         class="flex items-center justify-center h-8 px-3 rounded-md text-sm border font-semibold">
                                         Follow
                                     </a>
                                 </div>
                                 <div class="flex items-center space-x-4 rounded-md -mx-2 p-2 hover:bg-gray-50">
-                                    <a href="timeline-page.html" class="w-12 h-12 flex-shrink-0 overflow-hidden rounded-full relative">
+                                    <a href="/timeline/pages" class="w-12 h-12 flex-shrink-0 overflow-hidden rounded-full relative">
                                         <img src="../../assets/images/avatars/avatar-2.jpg" class="absolute w-full h-full inset-0 " alt="">
                                     </a>
                                     <div class="flex-1">
-                                        <a href="timeline-page.html" class="text-base font-semibold capitalize"> Alex Dolgove </a>
+                                        <a href="/timeline/pages" class="text-base font-semibold capitalize"> Alex Dolgove </a>
                                         <div class="text-sm text-gray-500 mt-0.5"> 356k Following </div>
                                     </div>
-                                    <a href="timeline-page.html"
+                                    <a href="/timeline/pages"
                                         class="flex items-center justify-center h-8 px-3 rounded-md text-sm border font-semibold">
                                         Follow
                                     </a>
                                 </div>
                                 <div class="flex items-center space-x-4 rounded-md -mx-2 p-2 hover:bg-gray-50">
-                                    <a href="timeline-page.html" class="w-12 h-12 flex-shrink-0 overflow-hidden rounded-full relative">
+                                    <a href="/timeline/pages" class="w-12 h-12 flex-shrink-0 overflow-hidden rounded-full relative">
                                         <img src="../../assets/images/avatars/avatar-3.jpg" class="absolute w-full h-full inset-0" alt="">
                                     </a>
                                     <div class="flex-1">
-                                        <a href="timeline-page.html" class="text-base font-semibold capitalize"> John Michael </a>
+                                        <a href="/timeline/pages" class="text-base font-semibold capitalize"> John Michael </a>
                                         <div class="text-sm text-gray-500 mt-0.5"> 845K Following</div>
                                     </div>
-                                    <a href="timeline-page.html"
+                                    <a href="/timeline/pages"
                                         class="flex items-center justify-center h-8 px-3 rounded-md text-sm border font-semibold">
                                         Follow
                                     </a>
                                 </div>
                                 <div class="flex items-center space-x-4 rounded-md -mx-2 p-2 hover:bg-gray-50">
-                                    <a href="timeline-page.html" class="w-12 h-12 flex-shrink-0 overflow-hidden rounded-full relative">
+                                    <a href="/timeline/pages" class="w-12 h-12 flex-shrink-0 overflow-hidden rounded-full relative">
                                         <img src="../../assets/images/avatars/avatar-4.jpg" class="absolute w-full h-full inset-0" alt="">
                                     </a>
                                     <div class="flex-1">
-                                        <a href="timeline-page.html" class="text-base font-semibold capitalize"> Dennis Han </a>
+                                        <a href="/timeline/pages" class="text-base font-semibold capitalize"> Dennis Han </a>
                                         <div class="text-sm text-gray-500 mt-0.5"> 845K Following</div>
                                     </div>
-                                    <a href="timeline-page.html"
+                                    <a href="/timeline/pages"
                                         class="flex items-center justify-center h-8 px-3 rounded-md text-sm border font-semibold">
                                         Follow
                                     </a>
                                 </div>
                                 <div class="flex items-center space-x-4 rounded-md -mx-2 p-2 hover:bg-gray-50">
-                                    <a href="timeline-page.html" class="w-12 h-12 flex-shrink-0 overflow-hidden rounded-full relative">
+                                    <a href="/timeline/pages" class="w-12 h-12 flex-shrink-0 overflow-hidden rounded-full relative">
                                         <img src="../../assets/images/avatars/avatar-5.jpg" class="absolute w-full h-full inset-0" alt="">
                                     </a>
                                     <div class="flex-1">
-                                        <a href="timeline-page.html" class="text-base font-semibold capitalize"> Martin Gray </a>
+                                        <a href="/timeline/pages" class="text-base font-semibold capitalize"> Martin Gray </a>
                                         <div class="text-sm text-gray-500 mt-0.5"> 845K Following</div>
                                     </div>
-                                    <a href="timeline-page.html"
+                                    <a href="/timeline/pages"
                                         class="flex items-center justify-center h-8 px-3 rounded-md text-sm border font-semibold">
                                         Follow
                                     </a>
                                 </div>
                                 <div class="flex items-center space-x-4 rounded-md -mx-2 p-2 hover:bg-gray-50">
-                                    <a href="timeline-page.html" class="w-12 h-12 flex-shrink-0 overflow-hidden rounded-full relative">
+                                    <a href="/timeline/pages" class="w-12 h-12 flex-shrink-0 overflow-hidden rounded-full relative">
                                         <img src="../../assets/images/avatars/avatar-6.jpg" class="absolute w-full h-full inset-0" alt="">
                                     </a>
                                     <div class="flex-1">
-                                        <a href="timeline-page.html" class="text-base  font-semibold capitalize"> Erica Jones </a>
+                                        <a href="/timeline/pages" class="text-base  font-semibold capitalize"> Erica Jones </a>
                                         <div class="text-sm text-gray-500 mt-0.5"> 845K Following</div>
                                     </div>
-                                    <a href="timeline-page.html"
+                                    <a href="/timeline/pages"
                                         class="flex items-center justify-center h-8 px-3 rounded-md text-sm border font-semibold">
                                         Follow
                                     </a>

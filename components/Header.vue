@@ -18,7 +18,9 @@
                      
                   <!-- search icon for mobile -->
                     <div class="header-search-icon" uk-toggle="target: /wrapper ; cls: show-searchbox"> </div>
-                    <div class="header_search"><i class="uil-search-alt"></i> 
+                    <div class="header_search">
+                        <!-- <i class="uil-search-alt"></i>  -->
+                        <ion-icon name="search-outline" class="search-icon"></ion-icon>
                         <input value="" type="text" class="form-control" placeholder="Search for Friends , Videos and more.." autocomplete="off">
                         <div uk-drop="mode: click" class="header_search_dropdown">
                                
@@ -514,3 +516,14 @@
             </div>
         </header>
 </template>
+
+
+<style>
+    .search-icon {
+        position: absolute;
+        font-size: 20px;
+        left: 2%;
+        top: 24%;
+        color: #979ca3;
+    }
+</style>

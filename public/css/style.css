@@ -8886,17 +8886,17 @@ body.story-active header .header_widgets .is_link {
   left: 0%;
 }
 
-.slider-icon.is-left::before {
+/* .slider-icon.is-left::before {
   content: '\e92f';
-}
+} */
 
 .slider-icon.is-right {
   right: -10%;
 }
 
-.slider-icon.is-right::before {
+/* .slider-icon.is-right::before {
   content: '\e930';
-}
+} */
 
 .story-slider-image,
 .story-slider-placeholder {
