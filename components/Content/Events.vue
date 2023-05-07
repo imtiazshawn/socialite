@@ -244,8 +244,14 @@
                             </li>
                         </ul>
 
-                        <a class="absolute bg-white top-16 flex items-center justify-center p-2 -left-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white" href="#" uk-slider-item="previous"> <i class="icon-feather-chevron-left"></i></a>
-                        <a class="absolute bg-white top-16 flex items-center justify-center p-2 -right-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white" href="#" uk-slider-item="next"> <i class="icon-feather-chevron-right"></i></a>
+                        <a class="absolute bg-white top-16 flex items-center justify-center p-2 -left-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white" href="#" uk-slider-item="previous"> 
+                            <!-- <i class="icon-feather-chevron-left"></i> -->
+                            <ion-icon name="chevron-back-outline"></ion-icon>
+                        </a>
+                        <a class="absolute bg-white top-16 flex items-center justify-center p-2 -right-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white" href="#" uk-slider-item="next"> 
+                            <!-- <i class="icon-feather-chevron-right"></i> -->
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
 
                     </div>
                 </div>
@@ -333,9 +339,15 @@
                             </li>
                         </ul>
                         <a class="absolute bg-white top-20 -mt-2 flex items-center justify-center p-2 -left-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white"
-                            href="#" uk-slider-item="previous"> <i class="icon-feather-chevron-left"></i></a>
+                            href="#" uk-slider-item="previous"> 
+                            <!-- <i class="icon-feather-chevron-left"></i> -->
+                            <ion-icon name="chevron-back-outline"></ion-icon>
+                        </a>
                         <a class="absolute bg-white top-20 -mt-2 flex items-center justify-center p-2 -right-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white"
-                            href="#" uk-slider-item="next"> <i class="icon-feather-chevron-right"></i></a>
+                        href="#" uk-slider-item="next"> 
+                            <!-- <i class="icon-feather-chevron-right"></i> -->
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
                     </div>
                 </div>
 
@@ -561,8 +573,14 @@
                             </li>
                         </ul>
 
-                        <a class="absolute bg-white top-16 flex items-center justify-center p-2 -left-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white" href="#" uk-slider-item="previous"> <i class="icon-feather-chevron-left"></i></a>
-                        <a class="absolute bg-white top-16 flex items-center justify-center p-2 -right-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white" href="#" uk-slider-item="next"> <i class="icon-feather-chevron-right"></i></a>
+                        <a class="absolute bg-white top-16 flex items-center justify-center p-2 -left-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white" href="#" uk-slider-item="previous"> 
+                            <!-- <i class="icon-feather-chevron-left"></i> -->
+                            <ion-icon name="chevron-back-outline"></ion-icon>
+                        </a>
+                        <a class="absolute bg-white top-16 flex items-center justify-center p-2 -right-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white" href="#" uk-slider-item="next"> 
+                            <!-- <i class="icon-feather-chevron-right"></i> -->
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
 
                     </div>
                 </div>

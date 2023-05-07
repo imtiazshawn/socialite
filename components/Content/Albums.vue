@@ -37,7 +37,8 @@
                                        <a href="#">  Share </a> 
                                     </div>
                                 </div> 
-                                <i class="btn-down text-2xl uil-cloud-download px-1"></i>
+                                <!-- <i class="btn-down text-2xl uil-cloud-download px-1"></i> -->
+                                <ion-icon name="cloud-download-outline" style="font-size: 20px;"></ion-icon>
                             </div>
                         </div>
                     </div>
@@ -55,7 +56,8 @@
                                        <a href="#">  Share </a> 
                                     </div>
                                 </div> 
-                                <i class="btn-down text-2xl uil-cloud-download px-1"></i>
+                                <!-- <i class="btn-down text-2xl uil-cloud-download px-1"></i> -->
+                                <ion-icon name="cloud-download-outline" style="font-size: 20px;"></ion-icon>
                             </div>
                         </div>
                     </div>
@@ -73,7 +75,8 @@
                                        <a href="#">  Share </a> 
                                     </div>
                                 </div> 
-                                <i class="btn-down text-2xl uil-cloud-download px-1"></i>
+                                <!-- <i class="btn-down text-2xl uil-cloud-download px-1"></i> -->
+                                <ion-icon name="cloud-download-outline" style="font-size: 20px;"></ion-icon>
                             </div>
                         </div>
                     </div>
@@ -91,7 +94,8 @@
                                        <a href="#">  Share </a> 
                                     </div>
                                 </div> 
-                                <i class="btn-down text-2xl uil-cloud-download px-1"></i>
+                                <!-- <i class="btn-down text-2xl uil-cloud-download px-1"></i> -->
+                                <ion-icon name="cloud-download-outline" style="font-size: 20px;"></ion-icon>
                             </div>
                         </div>
                     </div>
@@ -109,7 +113,8 @@
                                        <a href="#">  Share </a> 
                                     </div>
                                 </div> 
-                                <i class="btn-down text-2xl uil-cloud-download px-1"></i>
+                                <!-- <i class="btn-down text-2xl uil-cloud-download px-1"></i> -->
+                                <ion-icon name="cloud-download-outline" style="font-size: 20px;"></ion-icon>
                             </div>
                         </div>
                     </div>
@@ -127,7 +132,8 @@
                                        <a href="#">  Share </a> 
                                     </div>
                                 </div> 
-                                <i class="btn-down text-2xl uil-cloud-download px-1"></i>
+                                <!-- <i class="btn-down text-2xl uil-cloud-download px-1"></i> -->
+                                <ion-icon name="cloud-download-outline" style="font-size: 20px;"></ion-icon>
                             </div>
                         </div>
                     </div>
@@ -145,7 +151,8 @@
                                        <a href="#">  Share </a> 
                                     </div>
                                 </div> 
-                                <i class="btn-down text-2xl uil-cloud-download px-1"></i>
+                                <!-- <i class="btn-down text-2xl uil-cloud-download px-1"></i> -->
+                                <ion-icon name="cloud-download-outline" style="font-size: 20px;"></ion-icon>
                             </div>
                         </div>
                     </div>
@@ -163,7 +170,8 @@
                                        <a href="#">  Share </a> 
                                     </div>
                                 </div> 
-                                <i class="btn-down text-2xl uil-cloud-download px-1"></i>
+                                <!-- <i class="btn-down text-2xl uil-cloud-download px-1"></i> -->
+                                <ion-icon name="cloud-download-outline" style="font-size: 20px;"></ion-icon>
                             </div>
                         </div>
                     </div>
@@ -181,7 +189,8 @@
                                        <a href="#">  Share </a> 
                                     </div>
                                 </div> 
-                                <i class="btn-down text-2xl uil-cloud-download px-1"></i>
+                                <!-- <i class="btn-down text-2xl uil-cloud-download px-1"></i> -->
+                                <ion-icon name="cloud-download-outline" style="font-size: 20px;"></ion-icon>
                             </div>
                         </div>
                     </div>
@@ -199,7 +208,8 @@
                                        <a href="#">  Share </a> 
                                     </div>
                                 </div> 
-                                <i class="btn-down text-2xl uil-cloud-download px-1"></i>
+                                <!-- <i class="btn-down text-2xl uil-cloud-download px-1"></i> -->
+                                <ion-icon name="cloud-download-outline" style="font-size: 20px;"></ion-icon>
                             </div>
                         </div>
                     </div>
@@ -217,7 +227,8 @@
                                        <a href="#">  Share </a> 
                                     </div>
                                 </div> 
-                                <i class="btn-down text-2xl uil-cloud-download px-1"></i>
+                                <!-- <i class="btn-down text-2xl uil-cloud-download px-1"></i> -->
+                                <ion-icon name="cloud-download-outline" style="font-size: 20px;"></ion-icon>
                             </div>
                         </div>
                     </div>
@@ -235,7 +246,8 @@
                                        <a href="#">  Share </a> 
                                     </div>
                                 </div> 
-                                <i class="btn-down text-2xl uil-cloud-download px-1"></i>
+                                <!-- <i class="btn-down text-2xl uil-cloud-download px-1"></i> -->
+                                <ion-icon name="cloud-download-outline" style="font-size: 20px;"></ion-icon>
                             </div>
                         </div>
                     </div>

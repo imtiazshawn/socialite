@@ -36,7 +36,8 @@
                                             <img src="../../assets/images/product/1.jpg" alt="">
                                             <span class="absolute bg-white px-2 py-1 text-sm rounded-md m-2"> Label</span>
                                             <button class="bg-red-100 absolute right-2 top-2 p-0.5 px-1.5 rounded-full text-red-500">
-                                                <i class="icon-feather-heart"> </i>
+                                                <!-- <i class="icon-feather-heart"> </i> -->
+                                                <ion-icon name="heart-outline" style="font-size: 20px;"></ion-icon>
                                             </button>
                                         </div>
                                         <div class="card-body">
@@ -57,7 +58,8 @@
                                             <div class="card-media-overly"></div>
                                             <img src="../../assets/images/product/15.jpg" alt="">
                                             <button class="bg-red-100 absolute right-2 top-2 p-0.5 px-1.5 rounded-full text-red-500">
-                                                <i class="icon-feather-heart"> </i>
+                                                <!-- <i class="icon-feather-heart"> </i> -->
+                                                <ion-icon name="heart-outline" style="font-size: 20px;"></ion-icon>
                                             </button>
                                         </div>
                                         <div class="card-body">
@@ -78,7 +80,8 @@
                                             <div class="card-media-overly"></div>
                                             <img src="../../assets/images/product/13.jpg" alt="">
                                             <button class="bg-red-100 absolute right-2 top-2 p-0.5 px-1.5 rounded-full text-red-500">
-                                                <i class="icon-feather-heart"> </i>
+                                                <!-- <i class="icon-feather-heart"> </i> -->
+                                                <ion-icon name="heart-outline" style="font-size: 20px;"></ion-icon>
                                             </button>
                                         </div>
                                         <div class="card-body">
@@ -99,7 +102,8 @@
                                             <div class="card-media-overly"></div>
                                             <img src="../../assets/images/product/14.jpg" alt="">
                                             <button class="bg-red-100 absolute right-2 top-2 p-0.5 px-1.5 rounded-full text-red-500">
-                                                <i class="icon-feather-heart"> </i>
+                                                <!-- <i class="icon-feather-heart"> </i> -->
+                                                <ion-icon name="heart-outline" style="font-size: 20px;"></ion-icon>
                                             </button>
                                         </div>
                                         <div class="card-body">
@@ -120,7 +124,8 @@
                                             <div class="card-media-overly"></div>
                                             <img src="../../assets/images/product/2.jpg" alt="">
                                             <button class="bg-red-100 absolute right-2 top-2 p-0.5 px-1.5 rounded-full text-red-500">
-                                                <i class="icon-feather-heart"> </i>
+                                                <!-- <i class="icon-feather-heart"> </i> -->
+                                                <ion-icon name="heart-outline" style="font-size: 20px;"></ion-icon>
                                             </button>
                                         </div>
                                         <div class="card-body">
@@ -141,7 +146,8 @@
                                             <div class="card-media-overly"></div>
                                             <img src="../../assets/images/product/4.jpg" alt="">
                                             <button class="bg-red-100 absolute right-2 top-2 p-0.5 px-1.5 rounded-full text-red-500">
-                                                <i class="icon-feather-heart"> </i>
+                                                <!-- <i class="icon-feather-heart"> </i> -->
+                                                <ion-icon name="heart-outline" style="font-size: 20px;"></ion-icon>
                                             </button>
                                         </div>
                                         <div class="card-body">
@@ -158,9 +164,15 @@
                         </ul>
                 
                         <a class="absolute bg-white bottom-1/2 flex items-center justify-center p-2 -left-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white"
-                            href="#" uk-slider-item="previous"> <i class="icon-feather-chevron-left"></i></a>
+                            href="#" uk-slider-item="previous"> 
+                            <!-- <i class="icon-feather-chevron-left"></i> -->
+                            <ion-icon name="chevron-back-outline"></ion-icon>
+                        </a>
                         <a class="absolute bg-white bottom-1/2 flex items-center justify-center p-2 -right-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white"
-                            href="#" uk-slider-item="next"> <i class="icon-feather-chevron-right"></i></a>
+                            href="#" uk-slider-item="next"> 
+                            <!-- <i class="icon-feather-chevron-right"></i> -->
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
                 
                     </div>
                 </div>
@@ -231,8 +243,14 @@
                         </ul>
                     </div>
                     
-                    <a class="absolute bg-white top-16 flex items-center justify-center p-2 -left-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white" href="#" uk-slider-item="previous"> <i class="icon-feather-chevron-left"></i></a>
-                    <a class="absolute bg-white top-16 flex items-center justify-center p-2 -right-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white" href="#" uk-slider-item="next"> <i class="icon-feather-chevron-right"></i></a>
+                    <a class="absolute bg-white top-16 flex items-center justify-center p-2 -left-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white" href="#" uk-slider-item="previous"> 
+                        <!-- <i class="icon-feather-chevron-left"></i> -->
+                        <ion-icon name="chevron-back-outline"></ion-icon>
+                    </a>
+                    <a class="absolute bg-white top-16 flex items-center justify-center p-2 -right-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white" href="#" uk-slider-item="next"> 
+                        <!-- <i class="icon-feather-chevron-right"></i> -->
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </a>
 
                 </div>
                    
@@ -352,9 +370,15 @@
                     </div>
                 
                     <a class="absolute bg-white top-11 flex items-center justify-center p-2 -left-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white"
-                        href="#" uk-slider-item="previous"> <i class="icon-feather-chevron-left"></i></a>
+                        href="#" uk-slider-item="previous"> 
+                        <!-- <i class="icon-feather-chevron-left"></i> -->
+                        <ion-icon name="chevron-back-outline"></ion-icon>
+                    </a>
                     <a class="absolute bg-white top-11 flex items-center justify-center p-2 -right-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white"
-                        href="#" uk-slider-item="next"> <i class="icon-feather-chevron-right"></i></a>
+                        href="#" uk-slider-item="next"> 
+                        <!-- <i class="icon-feather-chevron-right"></i> -->
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </a>
                 
                 </div>
 
@@ -380,7 +404,8 @@
                                             <img src="../../assets/images/product/12.jpg" alt="">
                                             <span class="absolute bg-white px-2 py-1 text-sm rounded-md m-2"> Label</span>
                                             <button class="bg-red-100 absolute right-2 top-2 p-0.5 px-1.5 rounded-full text-red-500">
-                                                <i class="icon-feather-heart"> </i>
+                                                <!-- <i class="icon-feather-heart"> </i> -->
+                                                <ion-icon name="heart-outline" style="font-size: 20px;"></ion-icon>
                                             </button>
                                         </div>
                                         <div class="card-body">
@@ -401,7 +426,8 @@
                                             <div class="card-media-overly"></div>
                                             <img src="../../assets/images/product/15.jpg" alt="">
                                             <button class="bg-red-100 absolute right-2 top-2 p-0.5 px-1.5 rounded-full text-red-500">
-                                                <i class="icon-feather-heart"> </i>
+                                                <!-- <i class="icon-feather-heart"> </i> -->
+                                                <ion-icon name="heart-outline" style="font-size: 20px;"></ion-icon>
                                             </button>
                                         </div>
                                         <div class="card-body">
@@ -422,7 +448,8 @@
                                             <div class="card-media-overly"></div>
                                             <img src="../../assets/images/product/4.jpg" alt="">
                                             <button class="bg-red-100 absolute right-2 top-2 p-0.5 px-1.5 rounded-full text-red-500">
-                                                <i class="icon-feather-heart"> </i>
+                                                <!-- <i class="icon-feather-heart"> </i> -->
+                                                <ion-icon name="heart-outline" style="font-size: 20px;"></ion-icon>
                                             </button>
                                         </div>
                                         <div class="card-body">
@@ -443,7 +470,8 @@
                                             <div class="card-media-overly"></div>
                                             <img src="../../assets/images/product/14.jpg" alt="">
                                             <button class="bg-red-100 absolute right-2 top-2 p-0.5 px-1.5 rounded-full text-red-500">
-                                                <i class="icon-feather-heart"> </i>
+                                                <!-- <i class="icon-feather-heart"> </i> -->
+                                                <ion-icon name="heart-outline" style="font-size: 20px;"></ion-icon>
                                             </button>
                                         </div>
                                         <div class="card-body">
@@ -464,7 +492,8 @@
                                             <div class="card-media-overly"></div>
                                             <img src="../../assets/images/product/9.jpg" alt="">
                                             <button class="bg-red-100 absolute right-2 top-2 p-0.5 px-1.5 rounded-full text-red-500">
-                                                <i class="icon-feather-heart"> </i>
+                                                <!-- <i class="icon-feather-heart"> </i> -->
+                                                <ion-icon name="heart-outline" style="font-size: 20px;"></ion-icon>
                                             </button>
                                         </div>
                                         <div class="card-body">
@@ -485,7 +514,8 @@
                                             <div class="card-media-overly"></div>
                                             <img src="../../assets/images/product/2.jpg" alt="">
                                             <button class="bg-red-100 absolute right-2 top-2 p-0.5 px-1.5 rounded-full text-red-500">
-                                                <i class="icon-feather-heart"> </i>
+                                                <!-- <i class="icon-feather-heart"> </i> -->
+                                                <ion-icon name="heart-outline" style="font-size: 20px;"></ion-icon>
                                             </button>
                                         </div>
                                         <div class="card-body">
@@ -502,9 +532,15 @@
                         </ul>
                 
                         <a class="absolute bg-white bottom-1/2 flex items-center justify-center p-2 -left-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white"
-                            href="#" uk-slider-item="previous"> <i class="icon-feather-chevron-left"></i></a>
+                            href="#" uk-slider-item="previous"> 
+                            <!-- <i class="icon-feather-chevron-left"></i> -->
+                            <ion-icon name="chevron-back-outline"></ion-icon>
+                        </a>
                         <a class="absolute bg-white bottom-1/2 flex items-center justify-center p-2 -right-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white"
-                            href="#" uk-slider-item="next"> <i class="icon-feather-chevron-right"></i></a>
+                            href="#" uk-slider-item="next"> 
+                            <!-- <i class="icon-feather-chevron-right"></i> -->
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
                 
                     </div>
                 </div>

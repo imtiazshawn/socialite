@@ -123,8 +123,14 @@
                             </li>
                         </ul>
     
-                        <a class="absolute bg-white top-16 flex items-center justify-center p-2 -left-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white" href="#" uk-slider-item="previous"> <i class="icon-feather-chevron-left"></i></a>
-                        <a class="absolute bg-white top-16 flex items-center justify-center p-2 -right-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white" href="#" uk-slider-item="next"> <i class="icon-feather-chevron-right"></i></a>
+                        <a class="absolute bg-white top-16 flex items-center justify-center p-2 -left-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white" href="#" uk-slider-item="previous"> 
+                            <!-- <i class="icon-feather-chevron-left"></i> -->
+                            <ion-icon name="chevron-back-outline"></ion-icon>
+                        </a>
+                        <a class="absolute bg-white top-16 flex items-center justify-center p-2 -right-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white" href="#" uk-slider-item="next"> 
+                            <!-- <i class="icon-feather-chevron-right"></i> -->
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
 
                     </div>
                 </div>
@@ -176,34 +182,44 @@
                                 <div class="bg-white w-56 shadow-md mx-auto p-2 mt-12 rounded-md text-gray-500 hidden text-base border border-gray-100 dark:bg-gray-900 dark:text-gray-100 dark:border-gray-700 uk-drop uk-drop-bottom-right" uk-drop="mode: hover;pos: top-right" style="left: -188px; top: -12px;">
                           
                                     <ul class="space-y-1">
-                                      <li> 
-                                          <a href="#" class="flex items-center px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
-                                           <i class="uil-share-alt mr-1"></i> Share
-                                          </a> 
-                                      </li>
-                                      <li> 
-                                          <a href="#" class="flex items-center px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
-                                           <i class="uil-edit-alt mr-1"></i>  Edit Post 
-                                          </a> 
-                                      </li>
-                                      <li> 
-                                          <a href="#" class="flex items-center px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
-                                           <i class="uil-comment-slash mr-1"></i>   Disable comments
-                                          </a> 
-                                      </li> 
-                                      <li> 
-                                          <a href="#" class="flex items-center px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
-                                           <i class="uil-favorite mr-1"></i>  Add favorites 
-                                          </a> 
-                                      </li>
-                                      <li>
+                                        <li> 
+                                            <a href="#" class="flex items-center gap-x-1 px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
+                                            <!-- <i class="uil-share-alt mr-1"></i>  -->
+                                            <ion-icon class="text-lg" name="share-social-outline"></ion-icon>
+                                            Share
+                                            </a> 
+                                        </li>
+                                        <li> 
+                                            <a href="#" class="flex items-center gap-x-1 px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
+                                            <!-- <i class="uil-edit-alt mr-1"></i>   -->
+                                            <ion-icon class="text-lg" name="create-outline"></ion-icon>
+                                            Edit Post 
+                                            </a> 
+                                        </li>
+                                        <li> 
+                                            <a href="#" class="flex items-center gap-x-1 px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
+                                            <!-- <i class="uil-comment-slash mr-1"></i>    -->
+                                            <ion-icon class="text-lg" name="cloud-offline-outline"></ion-icon>
+                                            Disable comments
+                                            </a> 
+                                        </li> 
+                                        <li> 
+                                            <a href="#" class="flex items-center gap-x-1 px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
+                                            <!-- <i class="uil-favorite mr-1"></i>   -->
+                                            <ion-icon class="text-lg" name="star-outline"></ion-icon>
+                                            Add favorites 
+                                            </a> 
+                                        </li>
+                                        <li>
                                         <hr class="-mx-2 my-2 dark:border-gray-800">
-                                      </li>
-                                      <li> 
-                                          <a href="#" class="flex items-center px-3 py-2 text-red-500 hover:bg-red-100 hover:text-red-500 rounded-md dark:hover:bg-red-600">
-                                           <i class="uil-trash-alt mr-1"></i>  Delete
-                                          </a> 
-                                      </li>
+                                        </li>
+                                        <li> 
+                                            <a href="#" class="flex items-center gap-x-1 px-3 py-2 text-red-500 hover:bg-red-100 hover:text-red-500 rounded-md dark:hover:bg-red-600">
+                                            <!-- <i class="uil-trash-alt mr-1"></i>   -->
+                                            <ion-icon class="text-lg" name="trash-outline"></ion-icon>
+                                            Delete
+                                            </a> 
+                                        </li>
                                     </ul>
                                 
                                 </div>
@@ -241,34 +257,44 @@
                                 <div class="bg-white w-56 shadow-md mx-auto p-2 mt-12 rounded-md text-gray-500 hidden text-base border border-gray-100 dark:bg-gray-900 dark:text-gray-100 dark:border-gray-700 uk-drop uk-drop-bottom-right" uk-drop="mode: hover;pos: top-right" style="left: -188px; top: -12px;">
                           
                                     <ul class="space-y-1">
-                                      <li> 
-                                          <a href="#" class="flex items-center px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
-                                           <i class="uil-share-alt mr-1"></i> Share
-                                          </a> 
-                                      </li>
-                                      <li> 
-                                          <a href="#" class="flex items-center px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
-                                           <i class="uil-edit-alt mr-1"></i>  Edit Post 
-                                          </a> 
-                                      </li>
-                                      <li> 
-                                          <a href="#" class="flex items-center px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
-                                           <i class="uil-comment-slash mr-1"></i>   Disable comments
-                                          </a> 
-                                      </li> 
-                                      <li> 
-                                          <a href="#" class="flex items-center px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
-                                           <i class="uil-favorite mr-1"></i>  Add favorites 
-                                          </a> 
-                                      </li>
-                                      <li>
+                                        <li> 
+                                            <a href="#" class="flex items-center gap-x-1 px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
+                                            <!-- <i class="uil-share-alt mr-1"></i>  -->
+                                            <ion-icon class="text-lg" name="share-social-outline"></ion-icon>
+                                            Share
+                                            </a> 
+                                        </li>
+                                        <li> 
+                                            <a href="#" class="flex items-center gap-x-1 px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
+                                            <!-- <i class="uil-edit-alt mr-1"></i>   -->
+                                            <ion-icon class="text-lg" name="create-outline"></ion-icon>
+                                            Edit Post 
+                                            </a> 
+                                        </li>
+                                        <li> 
+                                            <a href="#" class="flex items-center gap-x-1 px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
+                                            <!-- <i class="uil-comment-slash mr-1"></i>    -->
+                                            <ion-icon class="text-lg" name="cloud-offline-outline"></ion-icon>
+                                            Disable comments
+                                            </a> 
+                                        </li> 
+                                        <li> 
+                                            <a href="#" class="flex items-center gap-x-1 px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
+                                            <!-- <i class="uil-favorite mr-1"></i>   -->
+                                            <ion-icon class="text-lg" name="star-outline"></ion-icon>
+                                            Add favorites 
+                                            </a> 
+                                        </li>
+                                        <li>
                                         <hr class="-mx-2 my-2 dark:border-gray-800">
-                                      </li>
-                                      <li> 
-                                          <a href="#" class="flex items-center px-3 py-2 text-red-500 hover:bg-red-100 hover:text-red-500 rounded-md dark:hover:bg-red-600">
-                                           <i class="uil-trash-alt mr-1"></i>  Delete
-                                          </a> 
-                                      </li>
+                                        </li>
+                                        <li> 
+                                            <a href="#" class="flex items-center gap-x-1 px-3 py-2 text-red-500 hover:bg-red-100 hover:text-red-500 rounded-md dark:hover:bg-red-600">
+                                            <!-- <i class="uil-trash-alt mr-1"></i>   -->
+                                            <ion-icon class="text-lg" name="trash-outline"></ion-icon>
+                                            Delete
+                                            </a> 
+                                        </li>
                                     </ul>
                                 
                                 </div>

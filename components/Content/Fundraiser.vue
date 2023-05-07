@@ -35,8 +35,9 @@
                                                 <div class="card-body">
                                                     <a href="timeline-fundraiser.html" class="font-semibold line-clamp-2 mb-2">Naveen's Boston Marathon & Charles River Marathon </a>
                                                     
-                                                    <div class="font-medium text-sm text-gray-400 flex items-center"> 
-                                                        <i class="icon-feather-trending-up text-base text-blue-500 mr-1.5"> </i>  
+                                                    <div class="font-medium text-sm text-gray-400 flex items-center gap-x-1"> 
+                                                        <!-- <i class="icon-feather-trending-up text-base text-blue-500 mr-1.5"> </i>   -->
+                                                        <ion-icon name="trending-up-outline" style="font-size: 20px; color: rgb(96 165 250)"></ion-icon>
                                                         321 People donated
                                                     </div>
                     
@@ -60,8 +61,9 @@
                                                 <div class="card-body">
                                                     <a href="timeline-fundraiser.html" class="font-semibold line-clamp-2 mb-2"> John's fundraiser for Hug It Forward.</a>
                                                     
-                                                    <div class="font-medium text-sm text-gray-400 flex items-center"> 
-                                                        <i class="icon-feather-trending-up text-base text-blue-500 mr-1.5"> </i>  
+                                                    <div class="font-medium text-sm text-gray-400 flex items-center gap-x-1"> 
+                                                        <!-- <i class="icon-feather-trending-up text-base text-blue-500 mr-1.5"> </i>   -->
+                                                        <ion-icon name="trending-up-outline" style="font-size: 20px; color: rgb(96 165 250)"></ion-icon>
                                                         216 People donated
                                                     </div>
                     
@@ -85,8 +87,9 @@
                                                 <div class="card-body">
                                                     <a href="timeline-fundraiser.html" class="font-semibold line-clamp-2 mb-2"> Striding for a Cure for Cystic Fibrosis  </a>
                                                     
-                                                    <div class="font-medium text-sm text-gray-400 flex items-center"> 
-                                                        <i class="icon-feather-trending-up text-base text-blue-500 mr-1.5"> </i>  
+                                                    <div class="font-medium text-sm text-gray-400 flex items-center gap-x-1"> 
+                                                        <!-- <i class="icon-feather-trending-up text-base text-blue-500 mr-1.5"> </i>   -->
+                                                        <ion-icon name="trending-up-outline" style="font-size: 20px; color: rgb(96 165 250)"></ion-icon>
                                                         421 People donated
                                                     </div>
                     
@@ -110,8 +113,9 @@
                                                 <div class="card-body">
                                                     <a href="timeline-fundraiser.html" class="font-semibold line-clamp-2 mb-2">Naveen's Boston Marathon & Charles River Marathon </a>
                                                     
-                                                    <div class="font-medium text-sm text-gray-400 flex items-center"> 
-                                                        <i class="icon-feather-trending-up text-base text-blue-500 mr-1.5"> </i>  
+                                                    <div class="font-medium text-sm text-gray-400 flex items-center gap-x-1"> 
+                                                        <!-- <i class="icon-feather-trending-up text-base text-blue-500 mr-1.5"> </i>   -->
+                                                        <ion-icon name="trending-up-outline" style="font-size: 20px; color: rgb(96 165 250)"></ion-icon>
                                                         142 People donated
                                                     </div>
                     
@@ -129,9 +133,15 @@
                                 </ul>
 
                                 <a class="absolute bg-white top-1/4 flex items-center justify-center p-2 -left-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white"
-                                    href="#" uk-slider-item="previous"> <i class="icon-feather-chevron-left"></i></a>
+                                    href="#" uk-slider-item="previous"> 
+                                    <!-- <i class="icon-feather-chevron-left"></i> -->
+                                    <ion-icon name="chevron-back-outline"></ion-icon>
+                                </a>
                                 <a class="absolute bg-white top-1/4 flex items-center justify-center p-2 -right-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white"
-                                    href="#" uk-slider-item="next"> <i class="icon-feather-chevron-right"></i></a>
+                                    href="#" uk-slider-item="next"> 
+                                    <!-- <i class="icon-feather-chevron-right"></i> -->
+                                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                                </a>
 
                             </div>
                         </div>
