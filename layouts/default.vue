@@ -23,7 +23,7 @@
         <FeedStoryPreview />
 
         <!-- Craete post modal -->
-        <CreatePost />
+        <FeedCreatePost />
 
     </div>
 </template>

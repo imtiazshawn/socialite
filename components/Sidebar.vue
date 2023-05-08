@@ -202,8 +202,8 @@
                         <ion-icon v-else name="chevron-up-outline" style="font-size: 19px; color: #a8a8a8; margin-left: 140px;"></ion-icon>
                     </a> 
                     <ul :class="{'sideLinks_ul': true, 'open': isSettingOpen}">
-                        <li><nuxt-link to="/pages-setting">layout 1</nuxt-link></li>
-                        <li><nuxt-link to="/pages-setting2">layout 2</nuxt-link></li>
+                        <li><nuxt-link to="/pages/setting">layout 1</nuxt-link></li>
+                        <li><nuxt-link to="/pages/setting2">layout 2</nuxt-link></li>
                     </ul>
                 </li>
                 <li>
@@ -214,9 +214,9 @@
                         <ion-icon v-else name="chevron-up-outline" style="font-size: 19px; color: #a8a8a8; margin-left: 115px;"></ion-icon>
                     </a>
                     <ul :class="{'sideLinks_ul': true, 'open': isPagesOpen}"> 
-                        <li><nuxt-link to="/pages-about"> About </nuxt-link></li>
-                        <li><nuxt-link to="/pages-contact"> Contact us </nuxt-link></li>
-                        <li><nuxt-link to="/pages-privacy"> Privacy </nuxt-link></li>
+                        <li><nuxt-link to="/pages/about"> About </nuxt-link></li>
+                        <li><nuxt-link to="/pages/contact"> Contact us </nuxt-link></li>
+                        <li><nuxt-link to="/pages/privacy"> Privacy </nuxt-link></li>
                     </ul>
                 </li> 
                 <li>
@@ -239,9 +239,9 @@
                         <ion-icon v-else name="chevron-up-outline" style="font-size: 19px; color: #a8a8a8; margin-left: 94px;"></ion-icon>
                     </a>
                     <ul :class="{'sideLinks_ul': true, 'open': isDevelopmentOpen}"> 
-                        <li><nuxt-link to="/development-components"> Compounents </nuxt-link></li>
-                        <li><nuxt-link to="/development-plugins"> Plugins </nuxt-link></li>
-                        <li><nuxt-link to="/development-icons"> Icons </nuxt-link></li>
+                        <li><nuxt-link to="/development/components"> Compounents </nuxt-link></li>
+                        <li><nuxt-link to="/development/plugins"> Plugins </nuxt-link></li>
+                        <li><nuxt-link to="/development/icons"> Icons </nuxt-link></li>
                     </ul>
                 </li>
                 <li>

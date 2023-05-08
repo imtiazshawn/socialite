@@ -23,16 +23,76 @@
                             uk-sticky="top:30 ; offset:80 ; media:@m ;bottom:true; animation: uk-animation-slide-top">
                             <h4 class="mb-0 p-3 uk-visible@m hidden"> Setting Navigation </h4>
                             <ul>
-                                <li class="uk-active"><a href="#"> <i class="uil-cog"></i> General </a></li>
-                                <li><a href="#"> <i class="uil-user"></i> Profile </a></li>
-                                <li><a href="#"> <i class="uil-usd-circle"></i> Monetization</a></li>
-                                <li><a href="#"> <i class="uil-unlock-alt"></i> Password </a></li>
-                                <li><a href="#"> <i class="uil-dollar-alt"></i> Earning</a></li>
-                                <li><a href="#"> <i class="uil-scenery"></i> Avatar & Cover</a></li>
-                                <li><a href="#"> <i class="uil-shield-check"></i> Security</a></li>
-                                <li><a href="#"> <i class="uil-bolt"></i> Membarship</a></li>
-                                <li><a href="#"> <i class="uil-history"></i> Manage Sessions</a></li>
-                                <li><a href="#"> <i class="uil-trash-alt"></i> Delete account</a></li>
+                                <li class="uk-active">
+                                    <a href="#"> 
+                                        <!-- <i class="uil-cog"></i>  -->
+                                        <ion-icon name="settings-outline" style="font-size: 18px; margin-right: 10px;"></ion-icon>
+                                        General  
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"> 
+                                        <!-- <i class="uil-user"></i>  -->
+                                        <ion-icon name="person-outline" style="font-size: 18px; margin-right: 10px;"></ion-icon>
+                                        Profile 
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"> 
+                                        <!-- <i class="uil-usd-circle"></i>  -->
+                                        <ion-icon name="podium-outline" style="font-size: 18px; margin-right: 10px;"></ion-icon>
+                                        Monetization
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"> 
+                                        <!-- <i class="uil-unlock-alt"></i>  -->
+                                        <ion-icon name="lock-open-outline" style="font-size: 18px; margin-right: 10px;"></ion-icon>
+                                        Password 
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"> 
+                                        <!-- <i class="uil-dollar-alt"></i>  -->
+                                        <ion-icon name="cash-outline" style="font-size: 18px; margin-right: 10px;"></ion-icon>
+                                        Earning
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"> 
+                                        <!-- <i class="uil-scenery"></i>  -->
+                                        <ion-icon name="images-outline" style="font-size: 18px; margin-right: 10px;"></ion-icon>
+                                        Avatar & Cover
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"> 
+                                        <!-- <i class="uil-shield-check"></i>  -->
+                                        <ion-icon name="shield-checkmark-outline" style="font-size: 18px; margin-right: 10px;"></ion-icon>
+                                        Security
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"> 
+                                        <!-- <i class="uil-bolt"></i>  -->
+                                        <ion-icon name="flash-outline" style="font-size: 18px; margin-right: 10px;"></ion-icon>
+                                        Membarship
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"> 
+                                        <!-- <i class="uil-history"></i>  -->
+                                        <ion-icon name="images-outline" style="font-size: 18px; margin-right: 10px;"></ion-icon>
+                                        Manage Sessions
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"> 
+                                        <!-- <i class="uil-trash-alt"></i>  -->
+                                        <ion-icon name="timer-outline" style="font-size: 18px; margin-right: 10px;"></ion-icon>
+                                        Delete account
+                                    </a>
+                                </li>
                             </ul>
                         </nav>
 

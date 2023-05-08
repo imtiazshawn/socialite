@@ -1,0 +1,3 @@
+<template>
+    <PagesSetting/>
+</template>

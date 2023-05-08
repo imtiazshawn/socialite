@@ -12,7 +12,7 @@ export default defineNuxtConfig({
                 {rel: "stylesheet", href: "css/style.css"},
                 {rel: "stylesheet", href: "css/icons.css"},
                 {rel: "stylesheet", href: "css/uikit.css"},
-                // {rel: "stylesheet", href: "css/main.css"},
+                {rel: "stylesheet", href: "css/main.css"},
                 { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
                 { rel: 'stylesheet', type: 'text/css', href: 'https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css' },
             ],
@@ -28,6 +28,9 @@ export default defineNuxtConfig({
                 },
                 {
                   src: 'js/custom.js'
+                },
+                {
+                  src: 'js/night-mode.js'
                 },
                 {
                   src: 'js/bootstrap-select.min.js'

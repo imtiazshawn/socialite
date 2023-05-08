@@ -1,3 +1,3 @@
 <template>
-  <ContentPage />
+    <PagesPrivacy />
 </template>
