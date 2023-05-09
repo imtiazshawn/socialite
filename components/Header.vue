@@ -218,7 +218,8 @@
                                                 <img src="../assets/images/avatars/avatar-1.jpg" alt="">
                                             </div>
                                             <span class="drop_icon bg-gradient-primary">
-                                                <i class="icon-feather-thumbs-up"></i>
+                                                <!-- <i class="icon-feather-thumbs-up"></i> -->
+                                                <ion-icon name="thumbs-up-outline"></ion-icon>
                                             </span>
                                             <div class="drop_text">
                                                 <p>
@@ -249,7 +250,8 @@
                                                     alt="">
                                             </div>
                                             <span class="drop_icon bg-gradient-primary">
-                                                <i class="icon-feather-thumbs-up"></i>
+                                                <!-- <i class="icon-feather-thumbs-up"></i> -->
+                                                <ion-icon name="thumbs-up-outline"></ion-icon>
                                             </span>
                                             <div class="drop_text">
                                                 <p>
@@ -280,7 +282,8 @@
                                                     alt="">
                                             </div>
                                             <span class="drop_icon bg-gradient-primary">
-                                                <i class="icon-feather-thumbs-up"></i>
+                                                <!-- <i class="icon-feather-thumbs-up"></i> -->
+                                                <ion-icon name="thumbs-up-outline"></ion-icon>
                                             </span>
                                             <div class="drop_text">
                                                 <p>
