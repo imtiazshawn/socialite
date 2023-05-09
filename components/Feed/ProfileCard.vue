@@ -5,7 +5,7 @@
                 <img src="../../assets/images/avatars/avatar-2.jpg" alt="">
                 <span class="user_status status_online"></span>
             </div>
-            <div class="contact-username"> Johnson Smith</div>
+            <div class="contact-username text-green-500"> Johnson Smith</div>
             <p>
                 <ion-icon name="people" class="text-lg mr-1"></ion-icon> Become friends with
                 <strong> Stella Johnson </strong> and <strong> 14 Others</strong>
@@ -14,9 +14,12 @@
                 <button type="button" class="button primary flex-1 block mr-2">
                     <i class="uil-envelope mr-1"></i> Send message</button>
                 <button type="button" href="#" class="button secondary button-icon mr-2">
-                    <i class="uil-list-ul"> </i> </button>
+                    <!-- <i class="uil-list-ul"> </i>  -->
+                    <ion-icon name="list-outline"></ion-icon>
+                </button>
                 <button type="button" a href="#" class="button secondary button-icon">
-                    <i class="uil-ellipsis-h"> </i>
+                    <!-- <i class="uil-ellipsis-h"> </i> -->
+                    <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
                 </button>
             </div>
         </div>
