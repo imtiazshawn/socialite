@@ -1,0 +1,7 @@
+.night-mode body {
+    background-color: #212121;
+    color: #f5f5f5;
+  }
+  .night-mode a {
+    color: #90caf9;
+  }

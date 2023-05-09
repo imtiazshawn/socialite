@@ -1,3 +1,3 @@
 <template>
-    <ContentFeed />
+    <Feed />
 </template>
