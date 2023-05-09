@@ -163,27 +163,27 @@
 
             <div class="contact-list my-2 ml-1">
 
-                <nuxt-link to="chats-friend.html">
+                <nuxt-link to="/chat/friend">
                     <div class="contact-avatar">
                         <img src="../assets/images/avatars/avatar-1.jpg" alt="">
                         <span class="user_status status_online"></span>
                     </div>
                     <div class="contact-username"> Dennis Han</div>
                 </nuxt-link>
-                <nuxt-link to="chats-friend.html">
+                <nuxt-link to="/chat/friend">
                     <div class="contact-avatar">
                         <img src="../assets/images/avatars/avatar-2.jpg" alt="">
                         <span class="user_status"></span>
                     </div>
                     <div class="contact-username"> Erica Jones</div>
                 </nuxt-link>
-                <nuxt-link to="chats-friend.html">
+                <nuxt-link to="/chat/friend">
                     <div class="contact-avatar">
                         <img src="../assets/images/avatars/avatar-7.jpg" alt="">
                     </div>
                     <div class="contact-username">Stella Johnson</div>
                 </nuxt-link>
-                <nuxt-link to="chats-friend.html">
+                <nuxt-link to="/chat/friend">
                     <div class="contact-avatar">
                         <img src="../assets/images/avatars/avatar-4.jpg" alt="">
                     </div>
