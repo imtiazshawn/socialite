@@ -227,7 +227,7 @@
                         <ion-icon v-else name="chevron-up-outline" style="font-size: 19px; color: #a8a8a8; margin-left: 79px;"></ion-icon>
                     </a> 
                     <ul :class="{'sideLinks_ul': true, 'open': isContentOpen}">
-                        <li><nuxt-link to="/create-group"> Create Group </nuxt-link></li>
+                        <li><nuxt-link to="/groups/create-group"> Create Group </nuxt-link></li>
                         <li><nuxt-link to="/create-page"> Create Page </nuxt-link></li> 
                     </ul>
                 </li>
