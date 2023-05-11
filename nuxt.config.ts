@@ -30,9 +30,6 @@ export default defineNuxtConfig({
                   src: 'js/custom.js'
                 },
                 {
-                  src: 'js/night-mode.js'
-                },
-                {
                   src: 'js/bootstrap-select.min.js'
                 },
                 {

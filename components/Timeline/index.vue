@@ -29,7 +29,7 @@
                         </div>
 
                         <div class="profile_info">
-                            <h1> Josephine Williams </h1>
+                            <h1> {{ profile.idName }} </h1>
                             <p> Family , Food , Fashion , Fourever <a href="#">Edit </a></p>
                         </div>
 
@@ -39,7 +39,7 @@
                         <nav class="responsive-nav pl-3">
                             <ul  uk-switcher="connect: #timeline-tab; animation: uk-animation-fade">
                                 <li><a href="#">Timeline</a></li>
-                                <li><a href="#">Friend <span>3,243</span> </a></li>
+                                <li><a href="#">Friend <span>{{ profile.totalFriends }}</span> </a></li>
                                 <li><a href="#">Photoes </a></li>
                                 <li><a href="#">Pages</a></li> 
                                 <li><a href="#">Groups</a></li> 
@@ -150,7 +150,7 @@
                                            <img src="../../assets/images/avatars/avatar-2.jpg" class="bg-gray-200 border border-white rounded-full w-10 h-10">
                                        </a>
                                        <div class="flex-1 font-semibold capitalize">
-                                           <a href="#" class="text-black dark:text-gray-100"> Johnson smith </a>
+                                           <a href="#" class="text-black dark:text-gray-100"> {{ profile.idName }} </a>
                                            <div class="text-gray-700 flex items-center space-x-2"> 5 <span> hrs </span> <ion-icon name="people"></ion-icon></div>
                                        </div>
                                    </div>
@@ -795,19 +795,19 @@
                                 <ul class="text-gray-600 space-y-3 mt-3">
                                     <li class="flex items-center space-x-2"> 
                                         <ion-icon name="home-sharp" class="rounded-full bg-gray-200 text-xl p-1 mr-3"></ion-icon>
-                                        Live In <strong> Cairo , Eygept  </strong>
+                                        Live In <strong> {{ profile.livesInLocation }}  </strong>
                                     </li>
                                     <li class="flex items-center space-x-2"> 
                                         <ion-icon name="globe" class="rounded-full bg-gray-200 text-xl p-1 mr-3"></ion-icon>
-                                        From <strong> Aden , Yemen  </strong>
+                                        From <strong> {{ profile.fromLocation }}  </strong>
                                     </li>
                                     <li class="flex items-center space-x-2"> 
                                         <ion-icon name="heart-sharp" class="rounded-full bg-gray-200 text-xl p-1 mr-3"></ion-icon>
-                                        From <strong> Relationship  </strong>
+                                        Status <strong> {{ profile.relationshipStatus }} </strong>
                                     </li>
                                     <li class="flex items-center space-x-2"> 
                                         <ion-icon name="logo-rss" class="rounded-full bg-gray-200 text-xl p-1 mr-3"></ion-icon>
-                                        Flowwed By <strong> 3,240 People </strong>
+                                        Followed By <strong> {{ profile.followedBy }} People </strong>
                                     </li>                                
                                 </ul>
                                 <div class="gap-3 grid grid-cols-3 mt-4">
@@ -832,37 +832,37 @@
                                         <div class="avatar relative rounded-md overflow-hidden w-full h-24 mb-2"> 
                                             <img src="../../assets/images/avatars/avatar-1.jpg" alt="" class="w-full h-full object-cover absolute">
                                         </div>
-                                        <div class="text-sm truncate"> Dennis Han </div>
+                                        <div class="text-sm truncate" v-if="profile.friends && profile.friends.length > 0"> {{ profile.friends[0].friendsIdName }} </div>
                                     </a>
                                     <a href="#">  
                                         <div class="avatar relative rounded-md overflow-hidden w-full h-24 mb-2"> 
                                             <img src="../../assets/images/avatars/avatar-2.jpg" alt="" class="w-full h-full object-cover absolute">
                                         </div>
-                                        <div class="text-sm truncate"> Erica Jones </div>
+                                        <div class="text-sm truncate" v-if="profile.friends && profile.friends.length > 0"> {{ profile.friends[1].friendsIdName }} </div>
                                     </a>
                                     <a href="#">  
                                         <div class="avatar relative rounded-md overflow-hidden w-full h-24 mb-2"> 
                                             <img src="../../assets/images/avatars/avatar-3.jpg" alt="" class="w-full h-full object-cover absolute">
                                         </div>
-                                        <div class="text-sm truncate"> Stella Johnson </div>
+                                        <div class="text-sm truncate" v-if="profile.friends && profile.friends.length > 0"> {{ profile.friends[2].friendsIdName }} </div>
                                     </a>
                                     <a href="#">  
                                         <div class="avatar relative rounded-md overflow-hidden w-full h-24 mb-2"> 
                                             <img src="../../assets/images/avatars/avatar-4.jpg" alt="" class="w-full h-full object-cover absolute">
                                         </div>
-                                        <div class="text-sm truncate"> Alex Dolgove</div>
+                                        <div class="text-sm truncate" v-if="profile.friends && profile.friends.length > 0"> {{ profile.friends[3].friendsIdName }} </div>
                                     </a>
                                     <a href="#">  
                                         <div class="avatar relative rounded-md overflow-hidden w-full h-24 mb-2"> 
                                             <img src="../../assets/images/avatars/avatar-5.jpg" alt="" class="w-full h-full object-cover absolute">
                                         </div>
-                                        <div class="text-sm truncate"> Jonathan Ali </div>
+                                        <div class="text-sm truncate" v-if="profile.friends && profile.friends.length > 0"> {{ profile.friends[4].friendsIdName }} </div>
                                     </a>
                                     <a href="#">  
                                         <div class="avatar relative rounded-md overflow-hidden w-full h-24 mb-2"> 
                                             <img src="../../assets/images/avatars/avatar-6.jpg" alt="" class="w-full h-full object-cover absolute">
                                         </div>
-                                        <div class="text-sm truncate"> Erica Han </div>
+                                        <div class="text-sm truncate" v-if="profile.friends && profile.friends.length > 0"> {{ profile.friends[5].friendsIdName }} </div>
                                     </a>
                                 </div>
                               <a href="#" class="button gray mt-3 w-full">  See all </a>
@@ -882,8 +882,10 @@
                                           <img src="../../assets/images/group/group-3.jpg" class="absolute w-full h-full inset-0 " alt="">
                                       </a>
                                       <div class="flex-1">
-                                          <a href="timeline-page.html" class="text-base font-semibold capitalize"> Graphic Design  </a>
-                                          <div class="text-sm text-gray-500 mt-0.5"> 345K  Following</div>
+                                        <a href="timeline-page.html" class="text-base font-semibold mb-0.5" v-if="profile.groups && profile.groups.length > 0">
+                                        {{ profile.groups[0].groupsName }}
+                                        </a>
+                                        <div class="font-medium text-sm" v-if="profile.groups && profile.groups.length > 0">{{ profile.groups[0].mututalFriendInGroups }} Mutual Friends </div>
                                       </div>
                                       <a href="timeline-page.html" class="flex items-center justify-center h-8 px-3 rounded-md text-sm border font-semibold bg-blue-500 text-white">
                                           Join
@@ -894,8 +896,10 @@
                                           <img src="../../assets/images/group/group-4.jpg" class="absolute w-full h-full inset-0 " alt="">
                                       </a>
                                       <div class="flex-1">
-                                          <a href="timeline-page.html" class="text-base font-semibold capitalize"> Mountain Riders </a>
-                                          <div class="text-sm text-gray-500 mt-0.5"> 452k Following </div>
+                                        <a href="timeline-page.html" class="text-base font-semibold mb-0.5" v-if="profile.groups && profile.groups.length > 0">
+                                        {{ profile.groups[1].groupsName }}
+                                        </a>
+                                        <div class="font-medium text-sm" v-if="profile.groups && profile.groups.length > 0">{{ profile.groups[1].mututalFriendInGroups }} Mutual Friends </div>
                                       </div>
                                       <a href="timeline-page.html" class="flex items-center justify-center h-8 px-3 rounded-md text-sm border font-semibold bg-blue-500 text-white">
                                           Join
@@ -906,8 +910,10 @@
                                           <img src="../../assets/images/group/group-2.jpg" class="absolute w-full h-full inset-0" alt="">
                                       </a>
                                       <div class="flex-1">
-                                          <a href="timeline-page.html" class="text-base font-semibold capitalize">  Coffee Addicts  </a>
-                                          <div class="text-sm text-gray-500 mt-0.5"> 845K Following</div>
+                                        <a href="timeline-page.html" class="text-base font-semibold mb-0.5" v-if="profile.groups && profile.groups.length > 0">
+                                        {{ profile.groups[2].groupsName }}
+                                        </a>
+                                        <div class="font-medium text-sm" v-if="profile.groups && profile.groups.length > 0">{{ profile.groups[2].mututalFriendInGroups }} Mutual Friends </div>
                                       </div>
                                       <a href="timeline-page.html" class="flex items-center justify-center h-8 px-3 rounded-md text-sm border font-semibold bg-blue-500 text-white">
                                           Join
@@ -918,8 +924,10 @@
                                           <img src="../../assets/images/group/group-1.jpg" class="absolute w-full h-full inset-0" alt="">
                                       </a>
                                       <div class="flex-1">
-                                          <a href="timeline-page.html" class="text-base font-semibold capitalize"> Architecture    </a>
-                                          <div class="text-sm text-gray-500 mt-0.5"> 237K Following</div>
+                                        <a href="timeline-page.html" class="text-base font-semibold mb-0.5" v-if="profile.groups && profile.groups.length > 0">
+                                        {{ profile.groups[3].groupsName }}
+                                        </a>
+                                        <div class="font-medium text-sm" v-if="profile.groups && profile.groups.length > 0">{{ profile.groups[3].mututalFriendInGroups }} Mutual Friends </div>
                                       </div>
                                       <a href="timeline-page.html" class="flex items-center justify-center h-8 px-3 rounded-md text-sm border font-semibold bg-blue-500 text-white">
                                           Join
@@ -953,8 +961,10 @@
                                     <img src="../../assets/images/avatars/avatar-2.jpg" class="h-36 object-cover rounded-md shadow-sm w-full">
                                 </a>
                                 <div class="pt-3 px-1">
-                                    <a href="timeline.html" class="text-base font-semibold mb-0.5">  James Lewis </a>
-                                    <p class="font-medium text-sm">843K Following </p>
+                                    <a href="timeline.html" class="text-base font-semibold mb-0.5" v-if="profile.friends && profile.friends.length > 0">
+                                        {{ profile.friends[0].friendsIdName }}
+                                    </a>
+                                    <p class="font-medium text-sm" v-if="profile.friends && profile.friends.length > 0">{{ profile.friends[0].friendsIdFollower }} Following </p>
                                     <button class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
                                         Following
                                     </button>
@@ -965,8 +975,10 @@
                                     <img src="../../assets/images/avatars/avatar-3.jpg" class="h-36 object-cover rounded-md shadow-sm w-full">
                                 </a>
                                 <div class="pt-3 px-1">
-                                    <a href="timeline.html" class="text-base font-semibold mb-0.5"> Monroe Parker  </a>
-                                    <p class="font-medium text-sm">843K Following </p>
+                                    <a href="timeline.html" class="text-base font-semibold mb-0.5" v-if="profile.friends && profile.friends.length > 0">
+                                        {{ profile.friends[1].friendsIdName }}
+                                    </a>
+                                    <p class="font-medium text-sm" v-if="profile.friends && profile.friends.length > 0">{{ profile.friends[1].friendsIdFollower }} Following </p>
                                     <button class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
                                         Following
                                     </button>
@@ -977,8 +989,10 @@
                                     <img src="../../assets/images/avatars/avatar-4.jpg" class="h-36 object-cover rounded-md shadow-sm w-full">
                                 </a>
                                 <div class="pt-3 px-1">
-                                    <a href="timeline.html" class="text-base font-semibold mb-0.5">  Martin Gray  </a>
-                                    <p class="font-medium text-sm">843K Following </p>
+                                    <a href="timeline.html" class="text-base font-semibold mb-0.5" v-if="profile.friends && profile.friends.length > 0">
+                                        {{ profile.friends[2].friendsIdName }}
+                                    </a>
+                                    <p class="font-medium text-sm" v-if="profile.friends && profile.friends.length > 0">{{ profile.friends[2].friendsIdFollower }} Following </p>
                                     <button class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
                                         Following
                                     </button>
@@ -989,8 +1003,10 @@
                                     <img src="../../assets/images/avatars/avatar-7.jpg" class="h-36 object-cover rounded-md shadow-sm w-full">
                                 </a>
                                 <div class="pt-3 px-1">
-                                    <a href="timeline.html" class="text-base font-semibold mb-0.5">  Alex Michael </a>
-                                    <p class="font-medium text-sm">843K Following </p>
+                                    <a href="timeline.html" class="text-base font-semibold mb-0.5" v-if="profile.friends && profile.friends.length > 0">
+                                        {{ profile.friends[3].friendsIdName }}
+                                    </a>
+                                    <p class="font-medium text-sm" v-if="profile.friends && profile.friends.length > 0">{{ profile.friends[3].friendsIdFollower }} Following </p>
                                     <button class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
                                         Following
                                     </button>
@@ -1001,8 +1017,10 @@
                                     <img src="../../assets/images/avatars/avatar-5.jpg" class="h-36 object-cover rounded-md shadow-sm w-full">
                                 </a>
                                 <div class="pt-3 px-1">
-                                    <a href="timeline.html" class="text-base font-semibold mb-0.5"> Jesse Stevens  </a>
-                                    <p class="font-medium text-sm">843K Following </p>
+                                    <a href="timeline.html" class="text-base font-semibold mb-0.5" v-if="profile.friends && profile.friends.length > 0">
+                                        {{ profile.friends[4].friendsIdName }}
+                                    </a>
+                                    <p class="font-medium text-sm" v-if="profile.friends && profile.friends.length > 0">{{ profile.friends[4].friendsIdFollower }} Following </p>
                                     <button class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
                                         Following
                                     </button>
@@ -1013,8 +1031,10 @@
                                     <img src="../../assets/images/avatars/avatar-6.jpg" class="h-36 object-cover rounded-md shadow-sm w-full">
                                 </a>
                                 <div class="pt-3 px-1">
-                                    <a href="timeline.html" class="text-base font-semibold mb-0.5"> Erica Jones  </a>
-                                    <p class="font-medium text-sm">843K Following </p>
+                                    <a href="timeline.html" class="text-base font-semibold mb-0.5" v-if="profile.friends && profile.friends.length > 0">
+                                        {{ profile.friends[5].friendsIdName }}
+                                    </a>
+                                    <p class="font-medium text-sm" v-if="profile.friends && profile.friends.length > 0">{{ profile.friends[5].friendsIdFollower }} Following </p>
                                     <button class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
                                         Following
                                     </button>
@@ -1025,8 +1045,10 @@
                                     <img src="../../assets/images/avatars/avatar-2.jpg" class="h-36 object-cover rounded-md shadow-sm w-full">
                                 </a>
                                 <div class="pt-3 px-1">
-                                    <a href="timeline.html" class="text-base font-semibold mb-0.5">  James Lewis </a>
-                                    <p class="font-medium text-sm">843K Following </p>
+                                    <a href="timeline.html" class="text-base font-semibold mb-0.5" v-if="profile.friends && profile.friends.length > 0">
+                                        {{ profile.friends[6].friendsIdName }}
+                                    </a>
+                                    <p class="font-medium text-sm" v-if="profile.friends && profile.friends.length > 0">{{ profile.friends[6].friendsIdFollower }} Following </p>
                                     <button class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
                                         Following
                                     </button>
@@ -1037,8 +1059,10 @@
                                     <img src="../../assets/images/avatars/avatar-3.jpg" class="h-36 object-cover rounded-md shadow-sm w-full">
                                 </a>
                                 <div class="pt-3 px-1">
-                                    <a href="timeline.html" class="text-base font-semibold mb-0.5"> Monroe Parker  </a>
-                                    <p class="font-medium text-sm">843K Following </p>
+                                    <a href="timeline.html" class="text-base font-semibold mb-0.5" v-if="profile.friends && profile.friends.length > 0">
+                                        {{ profile.friends[7].friendsIdName }}
+                                    </a>
+                                    <p class="font-medium text-sm" v-if="profile.friends && profile.friends.length > 0">{{ profile.friends[7].friendsIdFollower }} Following </p>
                                     <button class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
                                         Following
                                     </button>
@@ -1226,8 +1250,10 @@
                                     <img src="../../assets/images/avatars/avatar-4.jpg" class="h-36 object-cover rounded-t-md shadow-sm w-full">
                                 </a>
                                 <div class="p-3">
-                                    <a href="timeline-page.html" class="text-base font-semibold mb-0.5"> John Michael  </a>
-                                    <p class="font-medium text-sm">843K Following </p>
+                                    <a href="timeline-page.html" class="text-base font-semibold mb-0.5" v-if="profile.pages && profile.pages.length > 0">
+                                        {{ profile.pages[0].pagesName }}
+                                    </a>
+                                    <p class="font-medium text-sm" v-if="profile.pages && profile.pages.length > 0">{{ profile.pages[0].pagesIdFollower }} Following </p>
                                     <button class="bg-gray-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md  text-sm">
                                         Following
                                     </button>
@@ -1239,9 +1265,10 @@
                                     <img src="../../assets/images/avatars/avatar-3.jpg" class="h-36 object-cover rounded-t-md shadow-sm w-full">
                                 </a>
                                 <div class="p-3">
-                                    <a href="timeline-page.html" class="text-base font-semibold mb-0.5"> 
-                                        Alex Dolgove </a>
-                                    <p class="font-medium text-sm">843K Following </p>
+                                    <a href="timeline-page.html" class="text-base font-semibold mb-0.5" v-if="profile.pages && profile.pages.length > 0">
+                                        {{ profile.pages[1].pagesName }}
+                                    </a>
+                                    <p class="font-medium text-sm" v-if="profile.pages && profile.pages.length > 0">{{ profile.pages[1].pagesIdFollower }} Following </p>
                                     <button class="bg-gray-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md  text-sm">
                                         Following
                                     </button>
@@ -1253,8 +1280,10 @@
                                     <img src="../../assets/images/avatars/avatar-5.jpg" class="h-36 object-cover rounded-t-md shadow-sm w-full">
                                 </a>
                                 <div class="p-3">
-                                    <a href="timeline-page.html" class="text-base font-semibold mb-0.5"> Dennis Han  </a>
-                                    <p class="font-medium text-sm">843K Following </p>
+                                    <a href="timeline-page.html" class="text-base font-semibold mb-0.5" v-if="profile.pages && profile.pages.length > 0">
+                                        {{ profile.pages[2].pagesName }}
+                                    </a>
+                                    <p class="font-medium text-sm" v-if="profile.pages && profile.pages.length > 0">{{ profile.pages[2].pagesIdFollower }} Following </p>
                                     <button class="bg-gray-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md  text-sm">
                                         Following
                                     </button>
@@ -1265,8 +1294,10 @@
                                     <img src="../../assets/images/avatars/avatar-7.jpg" class="h-36 object-cover rounded-t-md shadow-sm w-full">
                                 </a>
                                 <div class="p-3">
-                                    <a href="timeline-page.html" class="text-base font-semibold mb-0.5">  Monroe Parker   </a>
-                                    <p class="font-medium text-sm">843K Following </p>
+                                    <a href="timeline-page.html" class="text-base font-semibold mb-0.5" v-if="profile.pages && profile.pages.length > 0">
+                                        {{ profile.pages[3].pagesName }}
+                                    </a>
+                                    <p class="font-medium text-sm" v-if="profile.pages && profile.pages.length > 0">{{ profile.pages[3].pagesIdFollower }} Following </p>
                                     <button class="bg-gray-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md  text-sm">
                                         Following
                                     </button>
@@ -1277,8 +1308,10 @@
                                     <img src="../../assets/images/avatars/avatar-6.jpg" class="h-36 object-cover rounded-t-md shadow-sm w-full">
                                 </a>
                                 <div class="p-3">
-                                    <a href="timeline-page.html" class="text-base font-semibold mb-0.5"> Erica Jones </a>
-                                    <p class="font-medium text-sm">843K Following </p>
+                                    <a href="timeline-page.html" class="text-base font-semibold mb-0.5" v-if="profile.pages && profile.pages.length > 0">
+                                        {{ profile.pages[4].pagesName }}
+                                    </a>
+                                    <p class="font-medium text-sm" v-if="profile.pages && profile.pages.length > 0">{{ profile.pages[4].pagesIdFollower }} Following </p>
                                     <button class="bg-gray-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md  text-sm">
                                         Following
                                     </button>
@@ -1289,8 +1322,10 @@
                                     <img src="../../assets/images/avatars/avatar-2.jpg" class="h-36 object-cover rounded-t-md shadow-sm w-full">
                                 </a>
                                 <div class="p-3">
-                                    <a href="timeline-page.html" class="text-base font-semibold mb-0.5">  Stella Johnson</a>
-                                    <p class="font-medium text-sm">843K Following </p>
+                                    <a href="timeline-page.html" class="text-base font-semibold mb-0.5" v-if="profile.pages && profile.pages.length > 0">
+                                        {{ profile.pages[5].pagesName }}
+                                    </a>
+                                    <p class="font-medium text-sm" v-if="profile.pages && profile.pages.length > 0">{{ profile.pages[5].pagesIdFollower }} Following </p>
                                     <button class="bg-gray-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md  text-sm">
                                         Following
                                     </button>
@@ -1301,8 +1336,10 @@
                                     <img src="../../assets/images/avatars/avatar-4.jpg" class="h-36 object-cover rounded-t-md shadow-sm w-full">
                                 </a>
                                 <div class="p-3">
-                                    <a href="timeline-page.html" class="text-base font-semibold mb-0.5"> John Michael  </a>
-                                    <p class="font-medium text-sm">843K Following </p>
+                                    <a href="timeline-page.html" class="text-base font-semibold mb-0.5" v-if="profile.pages && profile.pages.length > 0">
+                                        {{ profile.pages[6].pagesName }}
+                                    </a>
+                                    <p class="font-medium text-sm" v-if="profile.pages && profile.pages.length > 0">{{ profile.pages[6].pagesIdFollower }} Following </p>
                                     <button class="bg-gray-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md  text-sm">
                                         Following
                                     </button>
@@ -1314,9 +1351,10 @@
                                     <img src="../../assets/images/avatars/avatar-3.jpg" class="h-36 object-cover rounded-t-md shadow-sm w-full">
                                 </a>
                                 <div class="p-3">
-                                    <a href="timeline-page.html" class="text-base font-semibold mb-0.5"> 
-                                        Alex Dolgove </a>
-                                    <p class="font-medium text-sm">843K Following </p>
+                                    <a href="timeline-page.html" class="text-base font-semibold mb-0.5" v-if="profile.pages && profile.pages.length > 0">
+                                        {{ profile.pages[7].pagesName }}
+                                    </a>
+                                    <p class="font-medium text-sm" v-if="profile.pages && profile.pages.length > 0">{{ profile.pages[7].pagesIdFollower }} Following </p>
                                     <button class="bg-gray-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md  text-sm">
                                         Following
                                     </button>
@@ -1340,7 +1378,7 @@
                                 <h2 class="text-xl font-bold"> Groups </h2>
                                 <nav class="responsive-nav style-2 md:m-0 -mx-4">
                                     <ul>
-                                        <li class="active"><a href="#"> Joined <span> 230</span> </a></li>
+                                        <li class="active"><a href="#"> Joined <span> {{ profile.groupsJoined }}</span> </a></li>
                                         <li><a href="#"> My Groups </a></li>
                                         <li><a href="#"> Discover </a></li> 
                                     </ul>
@@ -1358,8 +1396,10 @@
                                     <img src="../../assets/images/group/group-3.jpg" class="absolute w-full h-full inset-0 " alt="">
                                 </a>
                                 <div class="flex-1">
-                                    <a href="timeline-page.html" class="text-base font-semibold capitalize">Graphic Design </a>
-                                    <div class="text-sm text-gray-500"> 54 mutual friends </div>
+                                    <a href="timeline-page.html" class="text-base font-semibold mb-0.5" v-if="profile.groups && profile.groups.length > 0">
+                                        {{ profile.groups[0].groupsName }}
+                                    </a>
+                                    <div class="font-medium text-sm" v-if="profile.groups && profile.groups.length > 0">{{ profile.groups[0].mututalFriendInGroups }} Mutual Friends </div>
                                 </div>
                                 <button class="bg-gray-100 font-semibold py-2 px-3 rounded-md text-sm md:mt-0 mt-3">
                                     Following
@@ -1370,8 +1410,10 @@
                                     <img src="../../assets/images/group/group-4.jpg" class="absolute w-full h-full inset-0 " alt="">
                                 </a>
                                 <div class="flex-1">
-                                    <a href="timeline-page.html" class="text-base font-semibold capitalize"> Mountain Riders  </a>
-                                    <div class="text-sm text-gray-500"> 54 mutual friends </div>
+                                    <a href="timeline-page.html" class="text-base font-semibold mb-0.5" v-if="profile.groups && profile.groups.length > 0">
+                                        {{ profile.groups[1].groupsName }}
+                                    </a>
+                                    <div class="font-medium text-sm" v-if="profile.groups && profile.groups.length > 0">{{ profile.groups[1].mututalFriendInGroups }} Mutual Friends </div>
                                 </div>
                                 <button class="bg-gray-100 font-semibold py-2 px-3 rounded-md text-sm md:mt-0 mt-3">
                                     Following
@@ -1382,8 +1424,10 @@
                                     <img src="../../assets/images/group/group-2.jpg" class="absolute w-full h-full inset-0 " alt="">
                                 </a>
                                 <div class="flex-1">
-                                    <a href="timeline-page.html" class="text-base font-semibold capitalize">  Coffee Addicts  </a>
-                                    <div class="text-sm text-gray-500"> 54 mutual friends </div>
+                                    <a href="timeline-page.html" class="text-base font-semibold mb-0.5" v-if="profile.groups && profile.groups.length > 0">
+                                        {{ profile.groups[2].groupsName }}
+                                    </a>
+                                    <div class="font-medium text-sm" v-if="profile.groups && profile.groups.length > 0">{{ profile.groups[2].mututalFriendInGroups }} Mutual Friends </div>
                                 </div>
                                 <button class="bg-gray-100 font-semibold py-2 px-3 rounded-md text-sm md:mt-0 mt-3">
                                     Following
@@ -1394,8 +1438,10 @@
                                     <img src="../../assets/images/group/group-5.jpg" class="absolute w-full h-full inset-0 " alt="">
                                 </a>
                                 <div class="flex-1">
-                                    <a href="timeline-page.html" class="text-base font-semibold capitalize">  Property Rent  </a>
-                                    <div class="text-sm text-gray-500"> 54 mutual friends </div>
+                                    <a href="timeline-page.html" class="text-base font-semibold mb-0.5" v-if="profile.groups && profile.groups.length > 0">
+                                        {{ profile.groups[3].groupsName }}
+                                    </a>
+                                    <div class="font-medium text-sm" v-if="profile.groups && profile.groups.length > 0">{{ profile.groups[3].mututalFriendInGroups }} Mutual Friends </div>
                                 </div>
                                 <button class="bg-gray-100 font-semibold py-2 px-3 rounded-md text-sm md:mt-0 mt-3">
                                     Following
@@ -1406,8 +1452,10 @@
                                     <img src="../../assets/images/group/group-1.jpg" class="absolute w-full h-full inset-0 " alt="">
                                 </a>
                                 <div class="flex-1">
-                                    <a href="timeline-page.html" class="text-base font-semibold capitalize"> Architecture </a>
-                                    <div class="text-sm text-gray-500"> 54 mutual friends </div>
+                                    <a href="timeline-page.html" class="text-base font-semibold mb-0.5" v-if="profile.groups && profile.groups.length > 0">
+                                        {{ profile.groups[4].groupsName }}
+                                    </a>
+                                    <div class="font-medium text-sm" v-if="profile.groups && profile.groups.length > 0">{{ profile.groups[4].mututalFriendInGroups }} Mutual Friends </div>
                                 </div>
                                 <button class="bg-gray-100 font-semibold py-2 px-3 rounded-md text-sm md:mt-0 mt-3">
                                     Following
@@ -1418,8 +1466,10 @@
                                     <img src="../../assets/images/group/group-3.jpg" class="absolute w-full h-full inset-0 " alt="">
                                 </a>
                                 <div class="flex-1">
-                                    <a href="timeline-page.html" class="text-base font-semibold capitalize">Graphic Design </a>
-                                    <div class="text-sm text-gray-500"> 54 mutual friends </div>
+                                    <a href="timeline-page.html" class="text-base font-semibold mb-0.5" v-if="profile.groups && profile.groups.length > 0">
+                                        {{ profile.groups[5].groupsName }}
+                                    </a>
+                                    <div class="font-medium text-sm" v-if="profile.groups && profile.groups.length > 0">{{ profile.groups[5].mututalFriendInGroups }} Mutual Friends </div>
                                 </div>
                                 <button class="bg-gray-100 font-semibold py-2 px-3 rounded-md text-sm md:mt-0 mt-3">
                                     Following
@@ -1430,8 +1480,10 @@
                                     <img src="../../assets/images/group/group-4.jpg" class="absolute w-full h-full inset-0 " alt="">
                                 </a>
                                 <div class="flex-1">
-                                    <a href="timeline-page.html" class="text-base font-semibold capitalize"> Mountain Riders  </a>
-                                    <div class="text-sm text-gray-500"> 54 mutual friends </div>
+                                    <a href="timeline-page.html" class="text-base font-semibold mb-0.5" v-if="profile.groups && profile.groups.length > 0">
+                                        {{ profile.groups[6].groupsName }}
+                                    </a>
+                                    <div class="font-medium text-sm" v-if="profile.groups && profile.groups.length > 0">{{ profile.groups[6].mututalFriendInGroups }} Mutual Friends </div>
                                 </div>
                                 <button class="bg-gray-100 font-semibold py-2 px-3 rounded-md text-sm md:mt-0 mt-3">
                                     Following
@@ -1442,8 +1494,10 @@
                                     <img src="../../assets/images/group/group-2.jpg" class="absolute w-full h-full inset-0 " alt="">
                                 </a>
                                 <div class="flex-1">
-                                    <a href="timeline-page.html" class="text-base font-semibold capitalize">  Coffee Addicts  </a>
-                                    <div class="text-sm text-gray-500"> 54 mutual friends </div>
+                                    <a href="timeline-page.html" class="text-base font-semibold mb-0.5" v-if="profile.groups && profile.groups.length > 0">
+                                        {{ profile.groups[7].groupsName }}
+                                    </a>
+                                    <div class="font-medium text-sm" v-if="profile.groups && profile.groups.length > 0">{{ profile.groups[7].mututalFriendInGroups }} Mutual Friends </div>
                                 </div>
                                 <button class="bg-gray-100 font-semibold py-2 px-3 rounded-md text-sm md:mt-0 mt-3">
                                     Following
@@ -1551,3 +1605,32 @@
             </div>
         </div>
 </template>
+
+
+
+<script>
+    import axios from 'axios'
+
+    export default {
+        data() {
+            return {
+                profile: {}
+            }
+        },
+        async created() {
+            try {
+                let storedProfile = localStorage.getItem('profile')
+                if (storedProfile) {
+                    this.profile = JSON.parse(storedProfile)
+                } else {
+                    const response = await axios.get('https://raw.githubusercontent.com/imtiazshawn/socialite-json/main/socialite')
+                    this.profile = response.data
+                    localStorage.setItem('profile', JSON.stringify(this.profile))
+                }
+                console.log(this.profile)
+            } catch (error) {
+                console.error(error)
+            }
+        }
+    }
+</script>
