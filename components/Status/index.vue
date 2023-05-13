@@ -3,71 +3,72 @@
         v-for="(post, index) in timelinePost" :key="index">
         <div class="flex justify-between items-center lg:p-4 p-2.5">
             <div class="flex flex-1 items-center space-x-4">
-                <a href="#">
+                <nuxt-link to="#">
                     <img src="../../assets/images/avatars/avatar-2.jpg"
                         class="bg-gray-200 border border-white rounded-full w-10 h-10">
-                </a>
+                </nuxt-link>
                 <div class="flex-1 font-semibold capitalize">
-                    <a href="#" class="text-green-500">
-                        {{ profile.idName }}
-                    </a>
+                    <nuxt-link to="#" class="text-green-500">
+                        {{ post.username }}
+                    </nuxt-link>
+                    <FeedProfileCard />
 
                     <div class="text-gray-700 flex items-center space-x-2"> {{ post.postTime }} <span>{{ post.postTimeFormat
                     }}</span> <ion-icon name="people"></ion-icon></div>
                 </div>
             </div>
             <div>
-                <a href="#">
+                <nuxt-link to="#">
                     <!-- <i class="icon-feather-more-horizontal text-2xl hover:bg-gray-200 rounded-full p-2 transition -mr-1 dark:hover:bg-gray-700"></i> -->
                     <ion-icon class="text-2xl hover:bg-gray-200 rounded-full p-2 transition -mr-1 dark:hover:bg-gray-700"
                         name="ellipsis-vertical-outline"></ion-icon>
-                </a>
+                </nuxt-link>
                 <div class="bg-white w-56 shadow-md mx-auto p-2 mt-12 rounded-md text-gray-500 hidden text-base border border-gray-100 dark:bg-gray-900 dark:text-gray-100 dark:border-gray-700"
                     uk-drop="mode: click;pos: bottom-right;animation: uk-animation-slide-bottom-small">
 
                     <ul class="space-y-1">
                         <li>
-                            <a href="#"
+                            <nuxt-link to="#"
                                 class="flex items-center gap-x-1 px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
                                 <!-- <i class="uil-share-alt mr-1"></i>  -->
                                 <ion-icon class="text-lg" name="share-social-outline"></ion-icon>
                                 Share
-                            </a>
+                            </nuxt-link>
                         </li>
                         <li>
-                            <a href="#"
+                            <nuxt-link to="#"
                                 class="flex items-center gap-x-1 px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
                                 <!-- <i class="uil-edit-alt mr-1"></i>   -->
                                 <ion-icon class="text-lg" name="create-outline"></ion-icon>
                                 Edit Post
-                            </a>
+                            </nuxt-link>
                         </li>
                         <li>
-                            <a href="#"
+                            <nuxt-link to="#"
                                 class="flex items-center gap-x-1 px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
                                 <!-- <i class="uil-comment-slash mr-1"></i>    -->
                                 <ion-icon class="text-lg" name="cloud-offline-outline"></ion-icon>
                                 Disable comments
-                            </a>
+                            </nuxt-link>
                         </li>
                         <li>
-                            <a href="#"
+                            <nuxt-link to="#"
                                 class="flex items-center gap-x-1 px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
                                 <!-- <i class="uil-favorite mr-1"></i>   -->
                                 <ion-icon class="text-lg" name="star-outline"></ion-icon>
                                 Add favorites
-                            </a>
+                            </nuxt-link>
                         </li>
                         <li>
                             <hr class="-mx-2 my-2 dark:border-gray-800">
                         </li>
                         <li>
-                            <a href="#"
+                            <nuxt-link to="#"
                                 class="flex items-center gap-x-1 px-3 py-2 text-red-500 hover:bg-red-100 hover:text-red-500 rounded-md dark:hover:bg-red-600">
                                 <!-- <i class="uil-trash-alt mr-1"></i>   -->
                                 <ion-icon class="text-lg" name="trash-outline"></ion-icon>
                                 Delete
-                            </a>
+                            </nuxt-link>
                         </li>
                     </ul>
 
@@ -76,16 +77,16 @@
         </div>
 
         <div uk-lightbox>
-            <a href="../../assets/images/avatars/avatar-lg-3.jpg">
+            <nuxt-link to="../../assets/images/avatars/avatar-lg-3.jpg">
                 <img src="../../assets/images/avatars/avatar-lg-4.jpg" alt="" class="max-h-96 w-full object-cover">
-            </a>
+            </nuxt-link>
         </div>
 
 
         <div class="p-4 space-y-3">
 
             <div class="flex space-x-4 lg:font-bold">
-                <a href="#" class="flex items-center space-x-2">
+                <nuxt-link to="#" class="flex items-center space-x-2">
                     <div class="p-2 rounded-full  text-black lg:bg-gray-100 dark:bg-gray-600">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="22"
                             height="22" class="dark:text-gray-100">
@@ -94,9 +95,9 @@
                         </svg>
                     </div>
                     <div> Like</div>
-                </a>
+                </nuxt-link>
                 <FeedReacts />
-                <a href="#" class="flex items-center space-x-2">
+                <nuxt-link to="#" class="flex items-center space-x-2">
                     <div class="p-2 rounded-full  text-black lg:bg-gray-100 dark:bg-gray-600">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="22"
                             height="22" class="dark:text-gray-100">
@@ -106,8 +107,8 @@
                         </svg>
                     </div>
                     <div> Comment</div>
-                </a>
-                <a href="#" class="flex items-center space-x-2 flex-1 justify-end">
+                </nuxt-link>
+                <nuxt-link to="#" class="flex items-center space-x-2 flex-1 justify-end">
                     <div class="p-2 rounded-full  text-black lg:bg-gray-100 dark:bg-gray-600">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="22"
                             height="22" class="dark:text-gray-100">
@@ -116,7 +117,7 @@
                         </svg>
                     </div>
                     <div> Share</div>
-                </a>
+                </nuxt-link>
             </div>
             <div class="flex items-center space-x-3 pt-2">
                 <div class="flex items-center">
@@ -134,20 +135,33 @@
 
             <StatusComment :post="post" />
 
-            <a href="#" class="hover:text-blue-600 hover:underline"> Veiw {{ post.comments.length }} more Comments </a>
+            <!-- <div>
+                <StatusComment :post="post" />
+                <div v-if="showMoreComments">
+                    <comment
+                    v-for="(comment, index) in post.comments"
+                    :key="index"
+                    :comment="comment"
+                    v-if="index < displayedComments"
+                    ></comment>
+                </div>
+                <nuxt-link to="" class="hover:text-blue-600 hover:underline cursor-pointer" @click="toggleComments">
+                    {{ showMoreComments ? `View ${remainingComments} more Comment(s)` : 'Less Comments' }}
+                </nuxt-link>
+            </div> -->
 
             <div class="bg-gray-100 rounded-full relative dark:bg-gray-800 border-t">
                 <input placeholder="Add your Comment.." class="bg-transparent max-h-10 shadow-none px-5">
                 <div class="-m-0.5 absolute bottom-0 flex items-center right-3 text-xl">
-                    <a href="#">
+                    <nuxt-link to="#">
                         <ion-icon name="happy-outline" class="hover:bg-gray-200 p-1.5 rounded-full"></ion-icon>
-                    </a>
-                    <a href="#">
+                    </nuxt-link>
+                    <nuxt-link to="#">
                         <ion-icon name="image-outline" class="hover:bg-gray-200 p-1.5 rounded-full"></ion-icon>
-                    </a>
-                    <a href="#">
+                    </nuxt-link>
+                    <nuxt-link to="#">
                         <ion-icon name="link-outline" class="hover:bg-gray-200 p-1.5 rounded-full"></ion-icon>
-                    </a>
+                    </nuxt-link>
                 </div>
             </div>
 
@@ -161,12 +175,6 @@
 import axios from 'axios';
 
 export default {
-    props: {
-        profile: {
-            type: Object,
-            required: true
-        }
-    },
     async created() {
         try {
             let storedTimelinePost = localStorage.getItem("timelinePost");
@@ -174,7 +182,7 @@ export default {
                 this.timelinePost = JSON.parse(storedTimelinePost);
             }
             else {
-                const response = await axios.get("https://raw.githubusercontent.com/imtiazshawn/socialite-json/main/timeline-post");
+                const response = await axios.get("https://raw.githubusercontent.com/imtiazshawn/socialite-json/main/socialite-post");
                 this.timelinePost = response.data;
                 localStorage.setItem("timelinePost", JSON.stringify(this.timelinePost));
             }
