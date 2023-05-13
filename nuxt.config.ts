@@ -1,11 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    postcss: {
-      plugins: {
-        tailwindcss: {},
-        autoprefixer: {},
-      },
+  modules: [
+    '@pinia/nuxt',
+  ],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
     },
+  },
     app: {
         head: {
             link: [
