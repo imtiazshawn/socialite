@@ -134,6 +134,8 @@
 
             <StatusComment :post="post" />
 
+            <a href="#" class="hover:text-blue-600 hover:underline"> Veiw {{ post.comments.length }} more Comments </a>
+
             <div class="bg-gray-100 rounded-full relative dark:bg-gray-800 border-t">
                 <input placeholder="Add your Comment.." class="bg-transparent max-h-10 shadow-none px-5">
                 <div class="-m-0.5 absolute bottom-0 flex items-center right-3 text-xl">
