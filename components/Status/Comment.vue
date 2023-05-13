@@ -1,5 +1,6 @@
 <template>
-    <div class="border-t py-4 space-y-4 dark:border-gray-600" v-if="post.comments && post.comments.length > 0" v-for="(comment, index) in post.comments" :key="index">
+    <div v-if="post.comments && post.comments.length > 0" v-for="(comment, index) in post.comments" :key="index">
+    <div class="border-t py-4 space-y-4 dark:border-gray-600">
         <div class="flex">
             <div class="w-10 h-10 rounded-full relative flex-shrink-0">
                 <img src="../../assets/images/avatars/avatar-1.jpg" alt="" class="absolute h-full rounded-full w-full">
@@ -13,12 +14,14 @@
                     </div>
                 </div>
                 <div class="text-sm flex items-center space-x-3 mt-2 ml-5">
-                    <a href="#" class="text-red-600"> <i class="uil-heart"></i> Love </a>
+                    <a href="#" class="text-red-600"> <ion-icon name="heart-outline"></ion-icon> Love </a>
                     <a href="#"> Replay </a>
                     <span> 3d </span>
                 </div>
             </div>
         </div>
+    </div>
+    <a href="#" class="hover:text-blue-600 hover:underline"> Veiw {{ post.comments.length }} more Comments </a>
     </div>
 </template>
 

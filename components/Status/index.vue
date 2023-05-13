@@ -1,5 +1,6 @@
 <template>
-    <div class="card lg:mx-0 uk-animation-slide-bottom-small" v-if="timelinePost && timelinePost.length > 0" v-for="(post, index) in timelinePost" :key="index">
+    <div class="card lg:mx-0 uk-animation-slide-bottom-small" v-if="timelinePost && timelinePost.length > 0"
+        v-for="(post, index) in timelinePost" :key="index">
         <div class="flex justify-between items-center lg:p-4 p-2.5">
             <div class="flex flex-1 items-center space-x-4">
                 <a href="#">
@@ -7,16 +8,19 @@
                         class="bg-gray-200 border border-white rounded-full w-10 h-10">
                 </a>
                 <div class="flex-1 font-semibold capitalize">
-                    <a href="#" class="text-black dark:text-gray-100">
+                    <a href="#" class="text-green-500">
                         {{ profile.idName }}
                     </a>
 
-                    <div class="text-gray-700 flex items-center space-x-2"> {{ post.postTime }} <span>{{ post.postTimeFormat }}</span> <ion-icon name="people"></ion-icon></div>
+                    <div class="text-gray-700 flex items-center space-x-2"> {{ post.postTime }} <span>{{ post.postTimeFormat
+                    }}</span> <ion-icon name="people"></ion-icon></div>
                 </div>
             </div>
             <div>
-                <a href="#"> <i
-                        class="icon-feather-more-horizontal text-2xl hover:bg-gray-200 rounded-full p-2 transition -mr-1 dark:hover:bg-gray-700"></i>
+                <a href="#">
+                    <!-- <i class="icon-feather-more-horizontal text-2xl hover:bg-gray-200 rounded-full p-2 transition -mr-1 dark:hover:bg-gray-700"></i> -->
+                    <ion-icon class="text-2xl hover:bg-gray-200 rounded-full p-2 transition -mr-1 dark:hover:bg-gray-700"
+                        name="ellipsis-vertical-outline"></ion-icon>
                 </a>
                 <div class="bg-white w-56 shadow-md mx-auto p-2 mt-12 rounded-md text-gray-500 hidden text-base border border-gray-100 dark:bg-gray-900 dark:text-gray-100 dark:border-gray-700"
                     uk-drop="mode: click;pos: bottom-right;animation: uk-animation-slide-bottom-small">
@@ -24,26 +28,34 @@
                     <ul class="space-y-1">
                         <li>
                             <a href="#"
-                                class="flex items-center px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
-                                <i class="uil-share-alt mr-1"></i> Share
+                                class="flex items-center gap-x-1 px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
+                                <!-- <i class="uil-share-alt mr-1"></i>  -->
+                                <ion-icon class="text-lg" name="share-social-outline"></ion-icon>
+                                Share
                             </a>
                         </li>
                         <li>
                             <a href="#"
-                                class="flex items-center px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
-                                <i class="uil-edit-alt mr-1"></i> Edit Post
+                                class="flex items-center gap-x-1 px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
+                                <!-- <i class="uil-edit-alt mr-1"></i>   -->
+                                <ion-icon class="text-lg" name="create-outline"></ion-icon>
+                                Edit Post
                             </a>
                         </li>
                         <li>
                             <a href="#"
-                                class="flex items-center px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
-                                <i class="uil-comment-slash mr-1"></i> Disable comments
+                                class="flex items-center gap-x-1 px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
+                                <!-- <i class="uil-comment-slash mr-1"></i>    -->
+                                <ion-icon class="text-lg" name="cloud-offline-outline"></ion-icon>
+                                Disable comments
                             </a>
                         </li>
                         <li>
                             <a href="#"
-                                class="flex items-center px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
-                                <i class="uil-favorite mr-1"></i> Add favorites
+                                class="flex items-center gap-x-1 px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
+                                <!-- <i class="uil-favorite mr-1"></i>   -->
+                                <ion-icon class="text-lg" name="star-outline"></ion-icon>
+                                Add favorites
                             </a>
                         </li>
                         <li>
@@ -51,8 +63,10 @@
                         </li>
                         <li>
                             <a href="#"
-                                class="flex items-center px-3 py-2 text-red-500 hover:bg-red-100 hover:text-red-500 rounded-md dark:hover:bg-red-600">
-                                <i class="uil-trash-alt mr-1"></i> Delete
+                                class="flex items-center gap-x-1 px-3 py-2 text-red-500 hover:bg-red-100 hover:text-red-500 rounded-md dark:hover:bg-red-600">
+                                <!-- <i class="uil-trash-alt mr-1"></i>   -->
+                                <ion-icon class="text-lg" name="trash-outline"></ion-icon>
+                                Delete
                             </a>
                         </li>
                     </ul>
@@ -81,6 +95,7 @@
                     </div>
                     <div> Like</div>
                 </a>
+                <FeedReacts />
                 <a href="#" class="flex items-center space-x-2">
                     <div class="p-2 rounded-full  text-black lg:bg-gray-100 dark:bg-gray-600">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="22"
@@ -117,9 +132,7 @@
                 </div>
             </div>
 
-                <StatusComment :post="post" />
-
-            <a href="#" class="hover:text-blue-600 hover:underline"> Veiw {{ post.comments.length }} more Comments </a>
+            <StatusComment :post="post" />
 
             <div class="bg-gray-100 rounded-full relative dark:bg-gray-800 border-t">
                 <input placeholder="Add your Comment.." class="bg-transparent max-h-10 shadow-none px-5">
@@ -143,9 +156,9 @@
 
 
 <script>
-  import axios from 'axios';
+import axios from 'axios';
 
-  export default {
+export default {
     props: {
         profile: {
             type: Object,
