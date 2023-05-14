@@ -45,8 +45,9 @@
             </div>
 
         </div>
-        <div class="mt-1"></div>
-        <nuxt-link to="#" class="hover:text-blue-600 hover:underline" @click="toggleComments">
+        <div v-if="post.comments.length > 2" class="mt-1"></div>
+        <nuxt-link v-if="post.comments.length > 2" to="#" class="hover:text-blue-600 hover:underline"
+            @click="toggleComments">
             {{ showAllComments ? "Show less" : `View ${remainingComments} more Comments` }}
         </nuxt-link>
     </div>
