@@ -5,10 +5,10 @@
                 <img src="../../assets/images/avatars/avatar-2.jpg" alt="">
                 <span class="user_status status_online"></span>
             </div>
-            <div class="contact-username text-green-500"> Johnson Smith</div>
+            <div class="contact-username text-green-500"> {{ post.username }} </div>
             <p>
                 <ion-icon name="people" class="text-lg mr-1"></ion-icon> Become friends with
-                <strong> Stella Johnson </strong> and <strong> 14 Others</strong>
+                <strong> {{ post.mutual }} </strong> and <strong> {{ post.mutualFriends }} Others</strong>
             </p>
             <div class="contact-list-box-btns">
                 <button type="button" class="button primary flex-1 block mr-2">
@@ -25,3 +25,15 @@
         </div>
     </div>
 </template>
+
+
+<script>
+    export default ({
+        props: {
+            post: {
+                type: Object,
+                required: true
+            }
+        }
+    })
+</script>

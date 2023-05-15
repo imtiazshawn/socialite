@@ -11,7 +11,7 @@
                     <nuxt-link to="#" class="text-green-500">
                         {{ post.username }}
                     </nuxt-link>
-                    <FeedProfileCard />
+                    <FeedProfileCard :post="post" />
 
                     <div class="text-gray-700 flex items-center space-x-2"> {{ post.postTime }} <span>{{ post.postTimeFormat
                     }}</span> <ion-icon name="people"></ion-icon></div>
@@ -19,7 +19,6 @@
             </div>
             <div>
                 <nuxt-link to="#">
-                    <!-- <i class="icon-feather-more-horizontal text-2xl hover:bg-gray-200 rounded-full p-2 transition -mr-1 dark:hover:bg-gray-700"></i> -->
                     <ion-icon class="text-2xl hover:bg-gray-200 rounded-full p-2 transition -mr-1 dark:hover:bg-gray-700"
                         name="ellipsis-vertical-outline"></ion-icon>
                 </nuxt-link>
@@ -38,7 +37,6 @@
                         <li>
                             <nuxt-link to="#"
                                 class="flex items-center gap-x-1 px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
-                                <!-- <i class="uil-edit-alt mr-1"></i>   -->
                                 <ion-icon class="text-lg" name="create-outline"></ion-icon>
                                 Edit Post
                             </nuxt-link>
@@ -46,7 +44,6 @@
                         <li>
                             <nuxt-link to="#"
                                 class="flex items-center gap-x-1 px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
-                                <!-- <i class="uil-comment-slash mr-1"></i>    -->
                                 <ion-icon class="text-lg" name="cloud-offline-outline"></ion-icon>
                                 Disable comments
                             </nuxt-link>
@@ -76,10 +73,78 @@
             </div>
         </div>
 
-        <div uk-lightbox>
-            <nuxt-link to="../../assets/images/avatars/avatar-lg-3.jpg">
-                <img src="../../assets/images/avatars/avatar-lg-4.jpg" alt="" class="max-h-96 w-full object-cover">
-            </nuxt-link>
+        <!-- Photos -->
+        <div>
+            <div uk-lightbox v-for="(picture, index) in post.picture" :key="index">
+                <div v-if="post.picture.length == 1">
+                    <nuxt-link :to="picture">
+                        <img :src="picture" alt="" class="max-h-96 w-full object-cover">
+                    </nuxt-link>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2 px-5">
+            <div uk-lightbox v-for="(picture, index) in post.picture" :key="index">
+                <div v-if="post.picture.length == 2">
+                    <nuxt-link :to="picture">
+                        <img :src="picture" alt="" class="max-h-96 w-full object-cover">
+                    </nuxt-link>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2 px-5">
+            <!-- First Image -->
+            <div uk-lightbox v-if="post.picture && post.picture.length == 3" class="col-span-2">
+                <div class="grid grid-cols-1">
+                    <nuxt-link :to="post.picture[0]">
+                        <img :src="post.picture[0]" alt="" class="max-h-96 w-full object-cover">
+                    </nuxt-link>
+                </div>
+            </div>
+
+            <!-- Second and Third Images -->
+            <div class="col-span-2" v-if="post.picture && post.picture.length == 3">
+                <div class="grid grid-cols-2 gap-2">
+                    <div uk-lightbox v-for="(picture, index) in post.picture.slice(1, 3)" :key="index">
+                        <nuxt-link :to="picture">
+                            <img :src="picture" alt="" class="max-h-96 w-full object-cover">
+                        </nuxt-link>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="grid grid-cols-2 gap-2 px-5">
+            <div uk-lightbox v-for="(picture, index) in post.picture" :key="index">
+                <div v-if="post.picture.length == 4">
+                    <nuxt-link :to="picture">
+                        <img :src="picture" alt="" class="max-h-96 w-full object-cover">
+                    </nuxt-link>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2 px-5">
+            <div uk-lightbox v-for="(picture, index) in post.picture?.slice(0, 4) || []" :key="index">
+                <div v-if="post.picture && post.picture.length > 4">
+                    <nuxt-link :to="picture" class="col-span-2 relative">
+                        <img :src="picture" alt="" class="max-h-96 w-full object-cover">
+                        <div v-if="index === 3"
+                            class="absolute top-0 left-0 text-white py-2 px-4 bg-gray-900 bg-opacity-30">
+                            View +{{ post.picture.length - 4 }} more
+                        </div>
+                    </nuxt-link>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Caption -->
+        <div class="p-5 pt-0 border-b dark:border-gray-700">
+            {{ post.caption }}
         </div>
 
 
@@ -135,21 +200,6 @@
 
             <StatusComment :post="post" />
 
-            <!-- <div>
-                <StatusComment :post="post" />
-                <div v-if="showMoreComments">
-                    <comment
-                    v-for="(comment, index) in post.comments"
-                    :key="index"
-                    :comment="comment"
-                    v-if="index < displayedComments"
-                    ></comment>
-                </div>
-                <nuxt-link to="" class="hover:text-blue-600 hover:underline cursor-pointer" @click="toggleComments">
-                    {{ showMoreComments ? `View ${remainingComments} more Comment(s)` : 'Less Comments' }}
-                </nuxt-link>
-            </div> -->
-
             <div class="bg-gray-100 rounded-full relative dark:bg-gray-800 border-t">
                 <input placeholder="Add your Comment.." class="bg-transparent max-h-10 shadow-none px-5">
                 <div class="-m-0.5 absolute bottom-0 flex items-center right-3 text-xl">
@@ -182,7 +232,7 @@ export default {
                 this.timelinePost = JSON.parse(storedTimelinePost);
             }
             else {
-                const response = await axios.get("https://raw.githubusercontent.com/imtiazshawn/socialite-json/main/socialite-post");
+                const response = await axios.get("https://raw.githubusercontent.com/imtiazshawn/socialite-json/main/feed-post");
                 this.timelinePost = response.data;
                 localStorage.setItem("timelinePost", JSON.stringify(this.timelinePost));
             }
