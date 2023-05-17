@@ -1,6 +1,6 @@
 <template>
-    <div class="card lg:mx-0 uk-animation-slide-bottom-small" v-if="timelinePost && timelinePost.length > 0"
-        v-for="(post, index) in timelinePost" :key="index">
+    <div class="card lg:mx-0 uk-animation-slide-bottom-small" v-if="timelinePost.data && timelinePost.data.length > 0"
+        v-for="(post, index) in timelinePost.data" :key="index">
         <div class="flex justify-between items-center lg:p-4 p-2.5">
             <div class="flex flex-1 items-center space-x-4">
                 <nuxt-link to="#">
@@ -9,7 +9,7 @@
                 </nuxt-link>
                 <div class="flex-1 font-semibold capitalize">
                     <nuxt-link to="#" class="text-green-500">
-                        {{ post.username }}
+                        {{ post.username }} 
                     </nuxt-link>
                     <FeedProfileCard :post="post" />
 
@@ -220,27 +220,27 @@
 </template>
 
 
-
 <script>
-import axios from 'axios';
+import { useTimelinePost } from '@/stores/posts';
 
 export default {
-    async created() {
-        try {
-            let storedTimelinePost = localStorage.getItem("timelinePost");
-            if (storedTimelinePost) {
-                this.timelinePost = JSON.parse(storedTimelinePost);
+    setup() {
+        const timelinePost = useTimelinePost();
+
+        const fetchApiData = async () => {
+            try {
+                await timelinePost.fetchData()
+                console.log(timelinePost.data)
+            } catch (error) {
+                console.error(error)
             }
-            else {
-                const response = await axios.get("https://raw.githubusercontent.com/imtiazshawn/socialite-json/main/feed-post");
-                this.timelinePost = response.data;
-                localStorage.setItem("timelinePost", JSON.stringify(this.timelinePost));
-            }
-            console.log(this.timelinePost);
         }
-        catch (error) {
-            console.error(error);
+
+        fetchApiData();
+
+        return {
+            timelinePost
         }
     }
-};
+}
 </script>
