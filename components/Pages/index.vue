@@ -32,7 +32,7 @@
                             <ul
                                 class="uk-slider-items uk-child-width-1-3@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small uk-grid">
 
-                                <li v-if="profile.pages && profile.pages.length > 0" v-for="(page, index) in profile.pages" :key="index">
+                                <li v-if="timeline.id && timeline.id.pages && timeline.id.pages.length > 0" v-for="(page, index) in timeline.id.pages" :key="index">
                                         <nuxt-link to="/timeline/pages" class="uk-link-reset">
                                             <div class="card">
                                                 <img src="../../assets/images/avatars/avatar-1.jpg" class="h-44 object-cover rounded-t-md shadow-sm w-full">
@@ -75,8 +75,8 @@
                         <div class="uk-slider-container px-1 py-3">
                             <ul
                                 class="uk-slider-items uk-child-width-1-3@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small uk-grid">
-                                <li v-if="profile && profile.pages && profile.pages.length > 0"
-                                    v-for="(page, index) in profile.pages" :key="index">
+                                <li v-if="timeline.id && timeline.id.pages && timeline.id.pages.length > 0"
+                                    v-for="(page, index) in timeline.id.pages" :key="index">
                                     <nuxt-link to="/timeline/pages" class="uk-link-reset">
                                         <div class="card">
                                             <img src="../../assets/images/avatars/avatar-6.jpg"
@@ -126,7 +126,7 @@
 
                         <div class="p-4 -mt-1.5">
 
-                            <div class="flex items-center space-x-4 rounded-md -mx-2 p-2 hover:bg-gray-50" v-if="profile && profile.pages && profile.pages.length > 0" v-for="(page, index) in profile.pages" :key="index">
+                            <div class="flex items-center space-x-4 rounded-md -mx-2 p-2 hover:bg-gray-50" v-if="timeline.id && timeline.id.pages && timeline.id.pages.length > 0" v-for="(page, index) in timeline.id.pages" :key="index">
                                 <nuxt-link to="/timeline/pages"
                                     class="w-12 h-12 flex-shrink-0 overflow-hidden rounded-full relative">
                                     <img src="../../assets/images/avatars/avatar-1.jpg"
@@ -158,29 +158,24 @@
 
 
 <script>
-import axios from 'axios';
+import { useTimeline } from '@/stores/timeline';
 
 export default ({
-    data() {
-        return {
-            profile: {}
-        }
-    },
-    mounted() {
-        const profile = localStorage.getItem('profile');
+    setup() {
+        const timeline = useTimeline();
 
-        if (profile) {
-            this.profile = JSON.parse(profile);
-        } else {
-            axios.get('https://raw.githubusercontent.com/imtiazshawn/socialite-json/main/timeline.json')
-                .then(response => {
-                    this.profile = response.data;
-                    localStorage.setItem('profile', JSON.stringify(response.data));
-                    console.log(localStorage.getItem('profile'));
-                })
-                .catch(error => {
-                    console.error('Error fetching profile data:', error);
-                });
+        const fetchApiData = async () => {
+            try {
+                await timeline.fetchData()
+            } catch (error) {
+                console.error(error)
+            }
+        }
+
+        fetchApiData();
+
+        return {
+            timeline
         }
     }
 })

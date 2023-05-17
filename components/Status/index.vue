@@ -230,12 +230,10 @@ export default {
         const fetchApiData = async () => {
             try {
                 await timelinePost.fetchData()
-                console.log(timelinePost.data)
             } catch (error) {
                 console.error(error)
             }
         }
-
         fetchApiData();
 
         return {
