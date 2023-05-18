@@ -736,7 +736,7 @@
 
 
 <script>
-import { useTimeline } from '@/stores/timeline';
+import { useTimeline } from '@/stores/api';
 
 export default {
     setup() {
@@ -744,7 +744,7 @@ export default {
 
         const fetchApiData = async () => {
             try {
-                await timeline.fetchData()
+                await timeline.fetchTimelineData()
                 console.log(timeline.id)
             } catch (error) {
                 console.error(error)

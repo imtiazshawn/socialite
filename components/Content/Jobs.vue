@@ -19,90 +19,23 @@
 
                         <div class="card divide-y divide-gray-100 sm:m-0 -mx-4">
 
-                            <!-- job 1 -->
-                            <div class="flex items-start flex-wrap p-7 sm:space-x-6">
+                            <!-- jobs -->
+                            <div class="flex items-start flex-wrap p-7 sm:space-x-6" v-if="jobs.jobs && jobs.jobs.length > 0" v-for="(job, index) in jobs.jobs">
                                 <a href="job-details.html" class="w-14 h-14 relative mt-1 order-1">
                                     <img src="assets/images/brand/brand-avatar-4.png" alt="" class="rounded-md">
                                 </a>
                                 <div class="flex-1 sm:order-2">
-                                    <h4 class="text-base text-gray-500 font-medium mb-2">Phaseout </h4>
+                                    <h4 class="text-base text-gray-500 font-medium mb-2"> {{ job.position }} </h4>
                                     <a href="job-details.html">
-                                        <h3 class="text-xl font-medium mb-4"> Technical Event Support Specialist </h3>
+                                        <h3 class="text-xl font-medium mb-4"> {{ job.companyName }} </h3>
                                     </a>
-                                    <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-                                        wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper ..
+                                    <p> 
+                                        {{ job.description.slice(0, 200) }} ..
                                     </p>
                                     <div class="job-tags mt-5 mb-2 space-x-2.5 space-y-2">
-                                        <a href="#" class="border px-3 py-1.5 rounded-md text-sm inline-block"> Wordpress </a>
-                                        <a href="#" class="border px-3 py-1.5 rounded-md text-sm inline-block"> Design </a>
-                                        <a href="#" class="border px-3 py-1.5 rounded-md text-sm inline-block"> Joomla </a>
-                                    </div>
-                                </div>
-                            </div>
- 
-                            <!-- job 1 -->
-                            <div class="flex items-start flex-wrap p-7 sm:space-x-6">
-                                <a href="job-details.html" class="w-14 h-14 relative mt-1 order-1">
-                                    <img src="assets/images/brand/brand-avatar-3.png" alt="" class="rounded-md">
-                                </a>
-                                <div class="flex-1 sm:order-2">
-                                    <h4 class="text-base text-gray-500 font-medium mb-2">Suranna </h4>
-                                    <a href="job-details.html">
-                                        <h3 class="text-xl font-medium mb-4"> Sky Accounting and mobile apps </h3>
-                                    </a>
-                                    <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-                                        wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper ..
-                                    </p>
-                                    <div class="mt-5 mb-2 space-x-2.5 space-y-2">
-                                        <a href="#" class="border px-3 py-1.5 rounded-md text-sm inline-block"> Java </a>
-                                        <a href="#" class="border px-3 py-1.5 rounded-md text-sm inline-block"> Design </a>
-                                        <a href="#" class="border px-3 py-1.5 rounded-md text-sm inline-block"> Typescript </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- job 3 -->
-                            <div class="flex items-start flex-wrap p-7 sm:space-x-6">
-                                <a href="job-details.html" class="w-14 h-14 relative mt-1 order-1">
-                                    <img src="assets/images/brand/brand-avatar-1.png" alt="" class="rounded-md">
-                                </a>
-                                <div class="flex-1 sm:order-2">
-                                    <h4 class="text-base text-gray-500 font-medium mb-2">Manager </h4>
-                                    <a href="job-details.html">
-                                        <h3 class="text-xl font-medium mb-4"> IT Department Manager &amp; Blogger-Entrepenour </h3>
-                                    </a>
-                                    <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-                                        wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper ..
-                                    </p>
-                                    <div class="mt-5 mb-2 space-x-2.5 space-y-2">
-                                        <a href="#" class="border px-3 py-1.5 rounded-md text-sm inline-block"> Wordpress </a>
-                                        <a href="#" class="border px-3 py-1.5 rounded-md text-sm inline-block"> Design </a>
-                                        <a href="#" class="border px-3 py-1.5 rounded-md text-sm inline-block"> Joomla </a>
-                                    </div>
-                                </div>
-                            </div>
- 
-                            <!-- job 4 -->
-                            <div class="flex items-start flex-wrap p-7 sm:space-x-6">
-                                <a href="job-details.html" class="w-14 h-14 relative mt-1 order-1">
-                                    <img src="assets/images/brand/brand-avatar-2.png" alt="" class="rounded-md">
-                                </a>
-                                <div class="flex-1 sm:order-2">
-                                    <h4 class="text-base text-gray-500 font-medium mb-2">Reveal </h4>
-                                    <a href="job-details.html">
-                                        <h3 class="text-xl font-medium mb-4"> Hardware Verification &amp; Validation Engineer  </h3>
-                                    </a>
-                                    <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-                                        wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper ..
-                                    </p>
-                                    <div class="mt-5 mb-2 space-x-2.5 space-y-2">
-                                        <a href="#" class="border px-3 py-1.5 rounded-md text-sm inline-block"> Architect </a>
-                                        <a href="#" class="border px-3 py-1.5 rounded-md text-sm inline-block"> Design </a>
-                                        <a href="#" class="border px-3 py-1.5 rounded-md text-sm inline-block"> Engineering </a>
+                                        <a href="#" class="border px-3 py-1.5 rounded-md text-sm inline-block" v-if="job.tags && job.tags.length > 0" v-for="(tag, index) in job.tags"> 
+                                            {{ tag }} 
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -169,3 +102,29 @@
             </div>
         </div>
 </template>
+
+
+<script>
+    import { useTimeline } from '@/stores/api';
+
+    export default {
+        setup() {
+            const jobs = useTimeline();
+
+            const fetchApiData = async () => {
+                try {
+                    await jobs.fetchJobsData()
+                    console.log(jobs.jobs)
+                } catch (error) {
+                    console.error(error)
+                }
+            }
+
+            fetchApiData();
+
+            return {
+                jobs
+            }
+        }
+    }
+</script>

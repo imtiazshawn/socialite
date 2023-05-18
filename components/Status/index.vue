@@ -221,15 +221,15 @@
 
 
 <script>
-import { useTimelinePost } from '@/stores/posts';
+import { useTimeline } from '@/stores/api';
 
 export default {
     setup() {
-        const timelinePost = useTimelinePost();
+        const timelinePost = useTimeline();
 
         const fetchApiData = async () => {
             try {
-                await timelinePost.fetchData()
+                await timelinePost.fetchTimelinePost()
             } catch (error) {
                 console.error(error)
             }
