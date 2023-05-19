@@ -147,12 +147,10 @@
             {{ post.caption }}
         </div>
 
-
         <div class="p-4 space-y-3">
 
             <div class="flex space-x-4 lg:font-bold">
-
-                <FeedReacts />
+                    <StatusReacts :index="index"/>
                 
                 <nuxt-link to="#" class="flex items-center space-x-2">
                     <div class="p-2 rounded-full  text-black lg:bg-gray-100 dark:bg-gray-600">
