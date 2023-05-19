@@ -54,25 +54,25 @@
     <!-- Other Reacts -->
     <div uk-drop="pos: top-left ;animation: uk-animation-slide-left-small">
       <div class="contact-list-box flex gap-x-2">
-        <button @click="setReaction('Liked')">
+        <button @click="setReaction('Liked', index)">
           <img src="../../assets/images/reacts/like.png" />
         </button>
-        <button @click="setReaction('Love')">
+        <button @click="setReaction('Love', index)">
           <img src="../../assets/images/reacts/love.png" />
         </button>
-        <button @click="setReaction('Care')">
+        <button @click="setReaction('Care', index)">
           <img src="../../assets/images/reacts/care.png" />
         </button>
-        <button @click="setReaction('Haha')">
+        <button @click="setReaction('Haha', index)">
           <img src="../../assets/images/reacts/haha.png" />
         </button>
-        <button @click="setReaction('Wow')">
+        <button @click="setReaction('Wow', index)">
           <img src="../../assets/images/reacts/wow.png" />
         </button>
-        <button @click="setReaction('Sad')">
+        <button @click="setReaction('Sad', index)">
           <img src="../../assets/images/reacts/sad.png" />
         </button>
-        <button @click="setReaction('Angry')">
+        <button @click="setReaction('Angry', index)">
           <img src="../../assets/images/reacts/angry.png" />
         </button>
       </div>
@@ -81,21 +81,27 @@
 </template>
   
 <script>
+import { computed, ref } from 'vue';
 import { useReactions } from '../../stores/reactions';
 
 export default {
   props: ['index'],
-  setup() {
+  setup(props) {
     const reactionsStore = useReactions();
+    const indexRef = ref(props.index);
 
-    function setReaction(reaction) {
-      reactionsStore.setReaction(reaction);
+    function setReaction(reaction, index) {
+      reactionsStore.setReaction(reaction, index);
     }
 
+    const reaction = computed(() => {
+      return reactionsStore.reactions[indexRef.value] || { text: 'Like' };
+    });
+
     return {
-      reaction: computed(() => reactionsStore.react),
-      setReaction
+      reaction,
+      setReaction,
     };
-  }
+  },
 };
 </script>

@@ -2,16 +2,14 @@ import { defineStore } from 'pinia';
 
 export const useReactions = defineStore('reactions', {
   state: () => ({
-    react: {
-      text: 'Like'
-    }
+    reactions: [],
   }),
   actions: {
-    setReaction(reaction) {
-      this.react = {
+    setReaction(reaction, index) {
+      this.reactions[index] = {
         text: reaction,
       };
-      console.log(this.react);
-    }
-  }
+      console.log(this.reactions[index]);
+    },
+  },
 });
