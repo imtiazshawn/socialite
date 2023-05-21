@@ -9,7 +9,7 @@
                 </nuxt-link>
                 <div class="flex-1 font-semibold capitalize">
                     <nuxt-link to="#" class="text-green-500">
-                        {{ post.username }} 
+                        {{ post.username }}
                     </nuxt-link>
                     <FeedProfileCard :post="post" />
 
@@ -150,9 +150,9 @@
         <div class="p-4 space-y-3">
 
             <div class="flex space-x-4 lg:font-bold">
-                    <StatusReacts :index="index"/>
-                
-                <nuxt-link to="#" class="flex items-center space-x-2">
+                <StatusReacts :index="index" :post="post" />
+
+                <nuxt-link to="#" class="flex items-center space-x-2" @click="toggleComment(index)">
                     <div class="p-2 rounded-full  text-black lg:bg-gray-100 dark:bg-gray-600">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="22"
                             height="22" class="dark:text-gray-100">
@@ -188,7 +188,7 @@
                 </div>
             </div>
 
-            <StatusComment :post="post" />
+            <StatusComment v-show="isCommentVisible[index] || isLargeDevice" :post="post" :index="index" />
 
             <div class="bg-gray-100 rounded-full relative dark:bg-gray-800 border-t">
                 <input placeholder="Add your Comment.." class="bg-transparent max-h-10 shadow-none px-5">
@@ -228,6 +228,27 @@ export default {
 
         return {
             timelinePost
+        }
+    },
+    data() {
+        return {
+            isCommentVisible: [],
+            isLargeDevice: false
+        };
+    },
+    mounted() {
+        this.checkDeviceSize();
+        window.addEventListener('resize', this.checkDeviceSize);
+    },
+    destroyed() {
+        window.removeEventListener('resize', this.checkDeviceSize);
+    },
+    methods: {
+        toggleComment(index) {
+            this.isCommentVisible[index] = !this.isCommentVisible[index];
+        },
+        checkDeviceSize() {
+            this.isLargeDevice = window.innerWidth >= 768;
         }
     }
 }

@@ -1,5 +1,14 @@
-import { defineStore } from 'pinia'
-import axios from 'axios'
+import { defineStore } from 'pinia';
+import axios from 'axios';
+import { 
+    GET_COURSES_DATA, 
+    GET_GROUPS_DATA, 
+    GET_JOBS_DATA, 
+    GET_TIMELINE_DATA, 
+    GET_TIMELINE_POST, 
+    GET_VIDEO_DATA 
+  } 
+  from '~/api/baseUrl';
 
 export const useTimeline = defineStore('api', {
   state: () => ({
@@ -13,7 +22,7 @@ export const useTimeline = defineStore('api', {
   actions: {
     async fetchTimelineData() {
       try {
-        const response = await axios.get('https://raw.githubusercontent.com/imtiazshawn/socialite-json/main/timeline.json')
+        const response = await axios.get(GET_TIMELINE_DATA)
         this.id = response.data
       } catch (error) {
         console.error('Error fetching API data:', error)
@@ -21,7 +30,7 @@ export const useTimeline = defineStore('api', {
     },
     async fetchTimelinePost() {
         try {
-          const response = await axios.get('https://raw.githubusercontent.com/imtiazshawn/socialite-json/main/feed-post')
+          const response = await axios.get(GET_TIMELINE_POST)
           this.data = response.data
         } catch (error) {
           console.error('Error fetching API data:', error)
@@ -29,7 +38,7 @@ export const useTimeline = defineStore('api', {
     },
     async fetchVideosData() {
         try {
-          const response = await axios.get('https://raw.githubusercontent.com/imtiazshawn/socialite-json/main/videos')
+          const response = await axios.get(GET_VIDEO_DATA)
           this.videos = response.data
         } catch (error) {
           console.error('Error fetching API data:', error)
@@ -37,7 +46,7 @@ export const useTimeline = defineStore('api', {
     },
     async fetchGroupsData() {
         try {
-          const response = await axios.get('https://raw.githubusercontent.com/imtiazshawn/socialite-json/main/groups')
+          const response = await axios.get(GET_GROUPS_DATA)
           this.groups = response.data
         } catch (error) {
           console.error('Error fetching API data:', error)
@@ -45,7 +54,7 @@ export const useTimeline = defineStore('api', {
     },
     async fetchJobsData() {
         try {
-          const response = await axios.get('https://raw.githubusercontent.com/imtiazshawn/socialite-json/main/job-vacancies')
+          const response = await axios.get(GET_JOBS_DATA)
           this.jobs = response.data
         } catch (error) {
           console.error('Error fetching API data:', error)
@@ -53,7 +62,7 @@ export const useTimeline = defineStore('api', {
     },
     async fetchCoursesData() {
         try {
-          const response = await axios.get('https://raw.githubusercontent.com/imtiazshawn/socialite-json/main/courses')
+          const response = await axios.get(GET_COURSES_DATA)
           this.courses = response.data
         } catch (error) {
           console.error('Error fetching API data:', error)
